@@ -1,0 +1,50 @@
+@import 'partials/variables';
+@import 'partials/prefix-mixins';
+@import 'partials/layout'; // responsive grid and media queries
+
+/* -------------------------------- 
+
+xBackground 
+
+-------------------------------- */
+
+body {
+	/* this is the page background */
+	background-color: $color-5;
+}
+
+/* -------------------------------- 
+
+xPatterns
+
+-------------------------------- */
+
+.cd-box {
+	/* this is the container of various design elements - i.e. the 2 logo of the branding section */
+	border: 1px solid $color-4;
+	border-radius: 3px;
+	background: $color-5;
+	box-shadow: 0 1px 1px rgba(#000, .05);
+	padding: 6px;
+}
+
+@import "partials/navigation";
+
+/* -------------------------------- 
+
+xPage title 
+
+-------------------------------- */
+
+main > h1 {
+	color: $color-2;
+
+	@include MQ(L) {
+		/* title goes into the header on big devices */
+		color: $color-5;
+	}
+}
+
+@import "partials/typography";
+@import "partials/buttons";
+@import 'partials/basic-style';
