@@ -1,0 +1,159 @@
+Package Report
+
+-----------------------------------------------------------------------------
+Document:
+Name: D&D-CSSGarden-Wireframes.ai
+Color Mode: CMYK color
+Color Profile: U.S. Web Coated (SWOP) v2
+Ruler Units: inches
+Artboard Dimensions: 13.7778 in x 25.2441 in
+Show Images in Outline Mode: OFF
+Highlight Substituted Fonts: OFF
+Highlight Substituted Glyphs: OFF
+Preserve Text Editability
+Simulate Colored Paper: OFF
+
+-----------------------------------------------------------------------------
+Spot Color Objects:
+
+-----------------------------------------------------------------------------
+Missing Fonts:NONE
+
+-----------------------------------------------------------------------------
+Protected Fonts that were not packaged:NONE
+
+-----------------------------------------------------------------------------
+Fonts:
+Zatanna Misdirection (TrueType)
+Mr. Eaves Small Caps (TrueType)
+Bookinsanity Italic (OTF)
+Nodesto Caps Condensed (TrueType)
+Scaly Sans (OTF)
+Scaly Sans Bold (OTF)
+
+-----------------------------------------------------------------------------
+Embedded Fonts:
+NONE
+
+-----------------------------------------------------------------------------
+Missing Links:
+NONE
+
+-----------------------------------------------------------------------------
+Linked Images:
+
+/Users/Ned/Desktop/Spring 18/WDD 331/L04/TexturesCom_PagePlain0102_M.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 5334K, 1138 by 1600 pixels
+Dimensions: 881.02 by 1238.692 points 
+Resolution: 93.001 by 93.001 pixels per inch
+
+
+/Users/Ned/Desktop/Spring 18/WDD 331/L04/TexturesCom_PagePlain0102_M.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 5334K, 1138 by 1600 pixels
+Dimensions: 881.02 by 1238.692 points 
+Resolution: 93.001 by 93.001 pixels per inch
+
+
+/Users/Ned/Desktop/Spring 18/WDD 331/L04/TexturesCom_PagePlain0102_M.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 5334K, 1138 by 1600 pixels
+Dimensions: 881.02 by 1238.692 points 
+Resolution: 93.001 by 93.001 pixels per inch
+
+
+/Users/Ned/Desktop/Spring 18/WDD 331/L04/TexturesCom_PagePlain0102_M.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 5334K, 1138 by 1600 pixels
+Dimensions: 881.02 by 1238.692 points 
+Resolution: 93.001 by 93.001 pixels per inch
+
+
+/Users/Ned/Desktop/Spring 18/WDD 331/L04/TexturesCom_PagePlain0102_M.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 5334K, 1138 by 1600 pixels
+Dimensions: 768 by 1079.789 points 
+Resolution: 106.688 by 106.688 pixels per inch
+
+
+/Users/Ned/Desktop/Spring 18/WDD 331/L04/TexturesCom_PagePlain0102_M.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 5334K, 1138 by 1600 pixels
+Dimensions: 768 by 1079.789 points 
+Resolution: 106.688 by 106.688 pixels per inch
+
+
+/Users/Ned/Desktop/Spring 18/WDD 331/L04/Screen Shot 2018-05-17 at 14.53.44-fullpage.png
+Type: Transparent CMYK
+Bits per Pixel: 40
+Channels: 5
+Size: 160453K, 2880 by 11410 pixels
+Dimensions: 282.75 by 683.168 points 
+Resolution: 733.369 by 1202.515 pixels per inch
+
+
+/Users/Ned/Desktop/Spring 18/WDD 331/L04/TexturesCom_PagePlain0102_M.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 5334K, 1138 by 1600 pixels
+Dimensions: 881.02 by 1238.692 points 
+Resolution: 93.001 by 93.001 pixels per inch
+
+
+/Users/Ned/Desktop/Spring 18/WDD 331/L04/TexturesCom_PagePlain0102_M.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 5334K, 1138 by 1600 pixels
+Dimensions: 881.02 by 1238.692 points 
+Resolution: 93.001 by 93.001 pixels per inch
+
+
+/Users/Ned/Desktop/Spring 18/WDD 331/L04/TexturesCom_PagePlain0102_M.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 5334K, 1138 by 1600 pixels
+Dimensions: 881.02 by 1238.692 points 
+Resolution: 93.001 by 93.001 pixels per inch
+
+
+/Users/Ned/Desktop/Spring 18/WDD 331/L04/TexturesCom_PagePlain0102_M.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 5334K, 1138 by 1600 pixels
+Dimensions: 881.02 by 1238.692 points 
+Resolution: 93.001 by 93.001 pixels per inch
+
+
+/Users/Ned/Desktop/Spring 18/WDD 331/L04/TexturesCom_PagePlain0102_M.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 5334K, 1138 by 1600 pixels
+Dimensions: 768 by 1079.789 points 
+Resolution: 106.688 by 106.688 pixels per inch
+
+
+/Users/Ned/Desktop/Spring 18/WDD 331/L04/TexturesCom_PagePlain0102_M.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 5334K, 1138 by 1600 pixels
+Dimensions: 768 by 1079.789 points 
+Resolution: 106.688 by 106.688 pixels per inch
