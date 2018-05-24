@@ -515,6 +515,18 @@ section {
 			background: darken($color-5, 5%);
 		}
 	}
+    
+    li:nth-of-type(6) .cd-color-swatch {
+		background: $color-6;
+
+		&::before {
+			background: lighten($color-6, 5%);
+		}
+
+		&::after {
+			background: darken($color-6, 5%);
+		}
+	}
 
 	@include MQ(S) {
 		li {

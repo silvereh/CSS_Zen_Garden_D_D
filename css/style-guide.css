@@ -5,7 +5,7 @@ xBackground
 -------------------------------- */
 body {
   /* this is the page background */
-  background-color: #ffffff; }
+  background-color: #dcdee0; }
 
 /* -------------------------------- 
 
@@ -14,9 +14,9 @@ xPatterns
 -------------------------------- */
 .cd-box {
   /* this is the container of various design elements - i.e. the 2 logo of the branding section */
-  border: 1px solid #e6e6e6;
+  border: 1px solid #d3b63b;
   border-radius: 3px;
-  background: #ffffff;
+  background: #dcdee0;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   padding: 6px; }
 
@@ -26,11 +26,11 @@ xNavigation
 
 -------------------------------- */
 header {
-  background-color: #19191a; }
+  background-color: #8b281c; }
 
 .cd-logo {
   /* logo box style */
-  background-color: #5f8ee4;
+  background-color: #ef3f3f;
   width: 120px; }
   @media only screen and (min-width: 1024px) {
     .cd-logo {
@@ -38,45 +38,45 @@ header {
 
 .cd-main-nav {
   /* main navigation background color - full screen on small devices */
-  background: #19191a; }
+  background: #8b281c; }
   .cd-main-nav li a {
-    color: #ffffff;
-    border-color: #262627; }
+    color: #dcdee0;
+    border-color: #a02e20; }
   @media only screen and (min-width: 1024px) {
     .cd-main-nav li a {
-      color: #7d7d82; }
+      color: #e8958b; }
       .cd-main-nav li a.selected {
-        color: #ffffff;
-        box-shadow: 0 2px 0 #5f8ee4; }
+        color: #dcdee0;
+        box-shadow: 0 2px 0 #ef3f3f; }
       .no-touch .cd-main-nav li a:hover {
-        color: #ffffff; } }
+        color: #dcdee0; } }
 
 .cd-nav-trigger span {
   /* hamburger menu */
-  background-color: #ffffff; }
+  background-color: #dcdee0; }
   .cd-nav-trigger span::before, .cd-nav-trigger span::after {
     /* upper and lower lines */
-    background-color: #ffffff; }
+    background-color: #dcdee0; }
 
 .nav-is-visible .cd-nav-trigger span {
   /* hide line in the center on mobile when nav is visible */
-  background-color: rgba(255, 255, 255, 0); }
+  background-color: rgba(220, 222, 224, 0); }
   .nav-is-visible .cd-nav-trigger span::before, .nav-is-visible .cd-nav-trigger span::after {
     /* preserve visibility of upper and lower lines - close icon */
-    background-color: white; }
+    background-color: #dcdee0; }
 
 .cd-download {
   /* download button top-right visible on big devices */
-  background-color: #323234; }
+  background-color: #b53425; }
   .no-touch .cd-download:hover {
-    background-color: #3f3f41; }
+    background-color: #cb3a29; }
   .cd-download span {
     /* tooltip */
-    background: #5f8ee4;
-    color: #ffffff; }
+    background: #ef3f3f;
+    color: #dcdee0; }
     .cd-download span::before {
       /* right arrow color */
-      border-color: #5f8ee4; }
+      border-color: #ef3f3f; }
 
 /* -------------------------------- 
 
@@ -84,11 +84,11 @@ xPage title
 
 -------------------------------- */
 main > h1 {
-  color: #19191a; }
+  color: #8b281c; }
   @media only screen and (min-width: 1600px) {
     main > h1 {
       /* title goes into the header on big devices */
-      color: #ffffff; } }
+      color: #dcdee0; } }
 
 /* -------------------------------- 
 
@@ -97,7 +97,7 @@ xTypography
 -------------------------------- */
 h1, h2 {
   font-family: "Open Sans", sans-serif;
-  color: #19191a; }
+  color: #8b281c; }
 
 h1 {
   font-size: 2.4rem;
@@ -122,14 +122,14 @@ h2 {
 
 section > h2::before {
   /* number before each section title */
-  color: silver; }
+  color: #9e8723; }
 
 p {
   font-size: 1.4rem;
   line-height: 1.4;
-  color: #58585b; }
+  color: #db5b4c; }
   p a {
-    color: #5f8ee4;
+    color: #ef3f3f;
     text-decoration: underline; }
   @media only screen and (min-width: 768px) {
     p {
@@ -147,36 +147,36 @@ xButtons
   border-radius: .25em;
   font-size: 1.4rem;
   font-family: "Open Sans", sans-serif;
-  color: #ffffff;
+  color: #dcdee0;
   padding: .6em 2.2em;
   cursor: pointer;
-  background: #5f8ee4; }
+  background: #ef3f3f; }
   .btn:focus {
     outline: none; }
   .no-touch .btn:hover {
-    background: #759de8; }
+    background: #f15757; }
   .btn.btn-success {
     background: #6fce72; }
     .no-touch .btn.btn-success:hover {
       background: #82d485; }
   .btn.btn-alert {
-    background: #e4655f; }
+    background: #a1452e; }
     .no-touch .btn.btn-alert:hover {
-      background: #e87a75; }
+      background: #b54e34; }
   .btn.btn-outline {
-    color: #5f8ee4;
+    color: #ef3f3f;
     background: transparent;
-    box-shadow: inset 0 0 0 1px #5f8ee4; }
+    box-shadow: inset 0 0 0 1px #ef3f3f; }
     .no-touch .btn.btn-outline:hover {
-      color: #ffffff;
-      background: #5f8ee4; }
+      color: #dcdee0;
+      background: #ef3f3f; }
   @media only screen and (min-width: 768px) {
     .btn {
       font-size: 1.6rem; } }
 
 .cd-buttons .cd-box:nth-of-type(2) span {
   /* CSS class name color */
-  color: #5f8ee4; }
+  color: #ef3f3f; }
 
 /* -------------------------------- 
 
@@ -560,35 +560,41 @@ section {
   display: block;
   padding: .6em 0; }
 .cd-colors li:nth-of-type(1) .cd-color-swatch {
-  background: #5f8ee4; }
+  background: #ef3f3f; }
   .cd-colors li:nth-of-type(1) .cd-color-swatch::before {
-    background: #759de8; }
+    background: #f15757; }
   .cd-colors li:nth-of-type(1) .cd-color-swatch::after {
-    background: #497fe0; }
+    background: #ed2727; }
 .cd-colors li:nth-of-type(2) .cd-color-swatch {
-  background: #19191a; }
+  background: #8b281c; }
   .cd-colors li:nth-of-type(2) .cd-color-swatch::before {
-    background: #262627; }
+    background: #a02e20; }
   .cd-colors li:nth-of-type(2) .cd-color-swatch::after {
-    background: #0d0d0d; }
+    background: #762218; }
 .cd-colors li:nth-of-type(3) .cd-color-swatch {
-  background: #e4655f; }
+  background: #a1452e; }
   .cd-colors li:nth-of-type(3) .cd-color-swatch::before {
-    background: #e87a75; }
+    background: #b54e34; }
   .cd-colors li:nth-of-type(3) .cd-color-swatch::after {
-    background: #e05049; }
+    background: #8d3d28; }
 .cd-colors li:nth-of-type(4) .cd-color-swatch {
-  background: #e6e6e6; }
+  background: #d3b63b; }
   .cd-colors li:nth-of-type(4) .cd-color-swatch::before {
-    background: #f3f3f3; }
+    background: #d8be50; }
   .cd-colors li:nth-of-type(4) .cd-color-swatch::after {
-    background: #d9d9d9; }
+    background: #c8aa2d; }
 .cd-colors li:nth-of-type(5) .cd-color-swatch {
-  background: #ffffff; }
+  background: #dcdee0; }
   .cd-colors li:nth-of-type(5) .cd-color-swatch::before {
-    background: white; }
+    background: #eaebec; }
   .cd-colors li:nth-of-type(5) .cd-color-swatch::after {
-    background: #f2f2f2; }
+    background: #ced1d4; }
+.cd-colors li:nth-of-type(6) .cd-color-swatch {
+  background: #bdd4d1; }
+  .cd-colors li:nth-of-type(6) .cd-color-swatch::before {
+    background: #ccdedc; }
+  .cd-colors li:nth-of-type(6) .cd-color-swatch::after {
+    background: #aecac6; }
 @media only screen and (min-width: 768px) {
   .cd-colors li {
     width: 19%;
@@ -614,7 +620,7 @@ section {
 /* xTypography section - basic style */
 .cd-typography h1::before {
   content: 'Aa - ';
-  color: #5f8ee4; }
+  color: #ef3f3f; }
 
 .cd-buttons .cd-box:first-of-type {
   border-bottom-left-radius: 0;
