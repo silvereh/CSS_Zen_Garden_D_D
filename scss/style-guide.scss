@@ -37,11 +37,11 @@ xPage title
 -------------------------------- */
 
 main > h1 {
-	color: $color-2;
+	color: white;
 
 	@include MQ(L) {
 		/* title goes into the header on big devices */
-		color: $color-5;
+		color: white;
 	}
 }
 
