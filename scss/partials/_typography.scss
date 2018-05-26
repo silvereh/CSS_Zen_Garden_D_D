@@ -5,54 +5,86 @@ xTypography
 
 -------------------------------- */
 
-h1, h2 {
+h2, h3 {
 	font-family: $secondary-font;
 	color: $color-2;
 }
 
 h1 {
-	font-size: 2.4rem;
-	font-weight: 300;
+    font-family: $quaternary-font;
+    color: white;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: .3px;
+    -webkit-text-stroke-color: black;
+    text-transform: uppercase;
+	font-size: 5.4rem;
 	line-height: 1.2;
 	margin: 0 0 .4em;
 
 	@include MQ(S) {
-		font-size: 3.2rem;
-	}
-
-	@include MQ(M) {
-		font-size: 4rem;
+		font-size: 7.6rem;
+        -webkit-text-stroke-width: .5px;
 	}
 }
 
 h2 {
-	font-weight: bold;
-	text-transform: uppercase;
 	margin: 1em 0;
-
-	@include MQ(S) {
-		font-size: 1.8rem;
-		margin: 1em 0 1.4em;
-	}
+    font-size: 3rem;
 }
 
-section > h2::before {
+h3 {
+	margin: 1em 0;
+    font-size: 2rem;
+    border-bottom: 1px solid $color-4;
+    padding-bottom: .1rem;
+}
+
+section > h3::before {
 	/* number before each section title */
 	color: darken($color-4, 15%);
 }
 
 p {
 	font-size: 1.4rem;
-	line-height: 1.4;
-	color: lighten($color-2, 25%);
+	line-height: 1.6;
+	color: black;
 
 	a {
-		color: $color-1;
-		text-decoration: underline;
+		color: $color-3;
 	}
-
-	@include MQ(S) {
-		font-size: 1.6rem;
-		line-height: 1.6;
-	}
+    
+    &.opening{
+        font-family: $tertiary-font;
+        font-size: 1.3rem;
+        line-height: 1.4;
+        padding: 10px;
+        background-color: $color-5;
+        border-left: 2px solid $color-2;
+        border-right: 2px solid $color-2;
+        position: relative;
+        &::before,&::after{
+            content: " ";
+            display: block;
+            height: 0px;
+            width: calc(100% + (8px));
+            border-left: 6px dotted $color-2;
+            border-right: 6px dotted $color-2;
+            padding: 3px 10px;
+//            border-radius: 100%;
+//            background-color: $color-2;
+            position: absolute;
+        }
+        &::before{
+            top: -2px;
+            left: -4px;  
+        }
+        &::after{
+            bottom: -2px;
+            right: -4px;
+        }
+    }
+    
+    &.footer{
+        font-family: $quinary-font;
+    }
 }

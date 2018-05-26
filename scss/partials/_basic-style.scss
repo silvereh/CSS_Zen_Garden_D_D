@@ -297,40 +297,40 @@ section {
 	margin: 3em 0;
 	@include clearfix;
 
-	&:nth-of-type(1) h2::before {
+	&:nth-of-type(1) h3::before {
 		content: '1. ';
 	}
 
-	&:nth-of-type(2) h2::before {
+	&:nth-of-type(2) h3::before {
 		content: '2. ';
 	}
 
-	&:nth-of-type(3) h2::before {
+	&:nth-of-type(3) h3::before {
 		content: '3. ';
 	}
 
-	&:nth-of-type(4) h2::before {
+	&:nth-of-type(4) h3::before {
 		content: '4. ';
 	}
 
-	&:nth-of-type(5) h2::before {
+	&:nth-of-type(5) h3::before {
 		content: '5. ';
 	}
 
-	&:nth-of-type(6) h2::before {
+	&:nth-of-type(6) h3::before {
 		content: '6. ';
 	}
     
-    &:nth-of-type(7) h2::before {
+    &:nth-of-type(7) h3::before {
 		content: '7. ';
 	}
-      &:nth-of-type(8) h2::before {
+      &:nth-of-type(8) h3::before {
 		content: '8. ';
 	}
-      &:nth-of-type(9) h2::before {
+      &:nth-of-type(9) h3::before {
 		content: '9. ';
 	}
-    &:nth-of-type(10) h2::before {
+    &:nth-of-type(10) h3::before {
 		content: '10. ';
 	}
 
@@ -558,14 +558,6 @@ section {
 }
 
 /* xTypography section - basic style */
-
-.cd-typography {
-
-	h1::before {
-		content: 'Aa - ';
-		color: $color-1;
-	}
-}
 
 .cd-buttons {
 	.cd-box:first-of-type {

@@ -7,6 +7,7 @@ $color-3: #a1452e; // Link color
 $color-4: #d3b63b; // <hr> color
 $color-5: #dcdee0; // Box text background color
 $color-6: #bdd4d1; // Box text row color
+$color-7: #f8f6e5; // Background color
 
 // additional colors
 
@@ -15,5 +16,66 @@ $alert: $color-3;  // red
 
 // fonts
 
-$primary-font: 'Merriweather', serif;
-$secondary-font: 'Open Sans', sans-serif;
+//Bookinsanity
+@font-face {
+    font-family: Bookinsanity;
+    src: url(../assets/fonts/Bookinsanity.otf);
+}
+@font-face {
+    font-family: BookinsanityBold;
+    src: url(../assets/fonts/BookinsanityBold.otf);
+}
+@font-face {
+    font-family: BookinsanityItalic;
+    src: url(../assets/fonts/BookinsanityItalic.otf);
+}
+@font-face {
+    font-family: BookinsanityBoldItalic;
+    src: url(../assets/fonts/BookinsanityBoldItalic.otf);
+}
+
+//MrEavesSmallCaps
+@font-face {
+    font-family: MrEavesSmallCaps;
+    src: url(../assets/fonts/MrEavesSmallCaps.otf);
+}
+
+//ScalySans
+@font-face {
+    font-family: ScalySans;
+    src: url(../assets/fonts/ScalySans.otf);
+}
+@font-face {
+    font-family: ScalySansBold;
+    src: url(../assets/fonts/ScalySansBold.otf);
+}
+@font-face {
+    font-family: ScalySansItalic;
+    src: url(../assets/fonts/ScalySansItalic.otf);
+}
+@font-face {
+    font-family: ScalySansBoldItalic;
+    src: url(../assets/fonts/ScalySansBoldItalic.otf);
+}
+
+//Nodesto
+@font-face {
+    font-family: Nodesto;
+    src: url(../assets/fonts/NodestoCapsCondensed.otf);
+}
+
+//ZatannaMisdirection
+@font-face {
+    font-family: ZatannaMisdirection;
+    src: url(../assets/fonts/ZatannaMisdirection.otf);
+}
+@font-face {
+    font-family: ZatannaMisdirectionItalic;
+    src: url(../assets/fonts/ZatannaMisdirectionItalic.otf);
+}
+
+$primary-font: 'Bookinsanity', serif;
+$secondary-font: 'MrEavesSmallCaps', serif;
+$tertiary-font: 'ScalySans', sans-serif;
+$quaternary-font: 'Nodesto', serif;
+$quinary-font: 'ZatannaMisdirection', sans-serif;

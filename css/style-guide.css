@@ -1,3 +1,39 @@
+@font-face {
+  font-family: Bookinsanity;
+  src: url(../assets/fonts/Bookinsanity.otf); }
+@font-face {
+  font-family: BookinsanityBold;
+  src: url(../assets/fonts/BookinsanityBold.otf); }
+@font-face {
+  font-family: BookinsanityItalic;
+  src: url(../assets/fonts/BookinsanityItalic.otf); }
+@font-face {
+  font-family: BookinsanityBoldItalic;
+  src: url(../assets/fonts/BookinsanityBoldItalic.otf); }
+@font-face {
+  font-family: MrEavesSmallCaps;
+  src: url(../assets/fonts/MrEavesSmallCaps.otf); }
+@font-face {
+  font-family: ScalySans;
+  src: url(../assets/fonts/ScalySans.otf); }
+@font-face {
+  font-family: ScalySansBold;
+  src: url(../assets/fonts/ScalySansBold.otf); }
+@font-face {
+  font-family: ScalySansItalic;
+  src: url(../assets/fonts/ScalySansItalic.otf); }
+@font-face {
+  font-family: ScalySansBoldItalic;
+  src: url(../assets/fonts/ScalySansBoldItalic.otf); }
+@font-face {
+  font-family: Nodesto;
+  src: url(../assets/fonts/NodestoCapsCondensed.otf); }
+@font-face {
+  font-family: ZatannaMisdirection;
+  src: url(../assets/fonts/ZatannaMisdirection.otf); }
+@font-face {
+  font-family: ZatannaMisdirectionItalic;
+  src: url(../assets/fonts/ZatannaMisdirectionItalic.otf); }
 /* -------------------------------- 
 
 xBackground 
@@ -5,7 +41,7 @@ xBackground
 -------------------------------- */
 body {
   /* this is the page background */
-  background-color: #dcdee0; }
+  background-color: #f8f6e5; }
 
 /* -------------------------------- 
 
@@ -16,7 +52,7 @@ xPatterns
   /* this is the container of various design elements - i.e. the 2 logo of the branding section */
   border: 1px solid #d3b63b;
   border-radius: 3px;
-  background: #dcdee0;
+  background: #f8f6e5;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   padding: 6px; }
 
@@ -95,46 +131,71 @@ main > h1 {
 xTypography 
 
 -------------------------------- */
-h1, h2 {
-  font-family: "Open Sans", sans-serif;
+h2, h3 {
+  font-family: "MrEavesSmallCaps", serif;
   color: #8b281c; }
 
 h1 {
-  font-size: 2.4rem;
-  font-weight: 300;
+  font-family: "Nodesto", serif;
+  color: white;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: .3px;
+  -webkit-text-stroke-color: black;
+  text-transform: uppercase;
+  font-size: 5.4rem;
   line-height: 1.2;
   margin: 0 0 .4em; }
   @media only screen and (min-width: 768px) {
     h1 {
-      font-size: 3.2rem; } }
-  @media only screen and (min-width: 1024px) {
-    h1 {
-      font-size: 4rem; } }
+      font-size: 7.6rem;
+      -webkit-text-stroke-width: .5px; } }
 
 h2 {
-  font-weight: bold;
-  text-transform: uppercase;
-  margin: 1em 0; }
-  @media only screen and (min-width: 768px) {
-    h2 {
-      font-size: 1.8rem;
-      margin: 1em 0 1.4em; } }
+  margin: 1em 0;
+  font-size: 3rem; }
 
-section > h2::before {
+h3 {
+  margin: 1em 0;
+  font-size: 2rem;
+  border-bottom: 1px solid #d3b63b;
+  padding-bottom: .1rem; }
+
+section > h3::before {
   /* number before each section title */
   color: #9e8723; }
 
 p {
   font-size: 1.4rem;
-  line-height: 1.4;
-  color: #db5b4c; }
+  line-height: 1.6;
+  color: black; }
   p a {
-    color: #ef3f3f;
-    text-decoration: underline; }
-  @media only screen and (min-width: 768px) {
-    p {
-      font-size: 1.6rem;
-      line-height: 1.6; } }
+    color: #a1452e; }
+  p.opening {
+    font-family: "ScalySans", sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.4;
+    padding: 10px;
+    background-color: #dcdee0;
+    border-left: 2px solid #8b281c;
+    border-right: 2px solid #8b281c;
+    position: relative; }
+    p.opening::before, p.opening::after {
+      content: " ";
+      display: block;
+      height: 0px;
+      width: calc(100% + (8px));
+      border-left: 6px dotted #8b281c;
+      border-right: 6px dotted #8b281c;
+      padding: 3px 10px;
+      position: absolute; }
+    p.opening::before {
+      top: -2px;
+      left: -4px; }
+    p.opening::after {
+      bottom: -2px;
+      right: -4px; }
+  p.footer {
+    font-family: "ZatannaMisdirection", sans-serif; }
 
 /* -------------------------------- 
 
@@ -146,7 +207,7 @@ xButtons
   box-shadow: none;
   border-radius: .25em;
   font-size: 1.4rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: "MrEavesSmallCaps", serif;
   color: #dcdee0;
   padding: .6em 2.2em;
   cursor: pointer;
@@ -197,7 +258,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: "Merriweather", serif; }
+  font-family: "Bookinsanity", serif; }
 
 a {
   text-decoration: none; }
@@ -206,7 +267,7 @@ img {
   max-width: 100%; }
 
 input, textarea, select {
-  font-family: "Merriweather", serif;
+  font-family: "Bookinsanity", serif;
   font-size: 1.6rem; }
 
 header {
@@ -463,25 +524,25 @@ section {
     clear: both;
     content: "";
     display: block; }
-  section:nth-of-type(1) h2::before {
+  section:nth-of-type(1) h3::before {
     content: '1. '; }
-  section:nth-of-type(2) h2::before {
+  section:nth-of-type(2) h3::before {
     content: '2. '; }
-  section:nth-of-type(3) h2::before {
+  section:nth-of-type(3) h3::before {
     content: '3. '; }
-  section:nth-of-type(4) h2::before {
+  section:nth-of-type(4) h3::before {
     content: '4. '; }
-  section:nth-of-type(5) h2::before {
+  section:nth-of-type(5) h3::before {
     content: '5. '; }
-  section:nth-of-type(6) h2::before {
+  section:nth-of-type(6) h3::before {
     content: '6. '; }
-  section:nth-of-type(7) h2::before {
+  section:nth-of-type(7) h3::before {
     content: '7. '; }
-  section:nth-of-type(8) h2::before {
+  section:nth-of-type(8) h3::before {
     content: '8. '; }
-  section:nth-of-type(9) h2::before {
+  section:nth-of-type(9) h3::before {
     content: '9. '; }
-  section:nth-of-type(10) h2::before {
+  section:nth-of-type(10) h3::before {
     content: '10. '; }
   @media only screen and (min-width: 768px) {
     section {
@@ -618,10 +679,6 @@ section {
       padding: 2em; } }
 
 /* xTypography section - basic style */
-.cd-typography h1::before {
-  content: 'Aa - ';
-  color: #ef3f3f; }
-
 .cd-buttons .cd-box:first-of-type {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0; }
