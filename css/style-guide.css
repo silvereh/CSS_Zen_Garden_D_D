@@ -1,3 +1,8 @@
+/* -------------------------------- 
+
+Variables & Mixins
+
+-------------------------------- */
 @font-face {
   font-family: Bookinsanity;
   src: url(../assets/fonts/Bookinsanity.otf); }
@@ -36,6 +41,11 @@
   src: url(../assets/fonts/ZatannaMisdirectionItalic.otf); }
 /* -------------------------------- 
 
+Responsive Grid & Media Queries
+
+-------------------------------- */
+/* -------------------------------- 
+
 xBackground 
 
 -------------------------------- */
@@ -62,15 +72,25 @@ xNavigation
 
 -------------------------------- */
 header {
-  background-color: #8b281c; }
+  display: none; }
 
-.cd-logo {
-  /* logo box style */
-  background-color: #ef3f3f;
-  width: 120px; }
-  @media only screen and (min-width: 1024px) {
-    .cd-logo {
-      width: 180px; } }
+.cd-navigation > div.cd-box > div {
+  background-color: #dcdee0;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+  padding: 2rem; }
+  .cd-navigation > div.cd-box > div > h3 {
+    color: black;
+    border-bottom: none;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    margin: 0.5rem 0; }
+  .cd-navigation > div.cd-box > div > nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .cd-navigation > div.cd-box > div > nav > ul > li > a {
+      color: #a1452e; }
 
 .cd-main-nav {
   /* main navigation background color - full screen on small devices */
@@ -203,48 +223,6 @@ p {
       right: -4px; }
   p.footer {
     font-family: "ZatannaMisdirection", sans-serif; }
-
-/* -------------------------------- 
-
-xButtons 
-
--------------------------------- */
-.btn {
-  border: none;
-  box-shadow: none;
-  border-radius: .25em;
-  font-size: 1.4rem;
-  font-family: "MrEavesSmallCaps", serif;
-  color: #dcdee0;
-  padding: .6em 2.2em;
-  cursor: pointer;
-  background: #ef3f3f; }
-  .btn:focus {
-    outline: none; }
-  .no-touch .btn:hover {
-    background: #f15757; }
-  .btn.btn-success {
-    background: #6fce72; }
-    .no-touch .btn.btn-success:hover {
-      background: #82d485; }
-  .btn.btn-alert {
-    background: #a1452e; }
-    .no-touch .btn.btn-alert:hover {
-      background: #b54e34; }
-  .btn.btn-outline {
-    color: #ef3f3f;
-    background: transparent;
-    box-shadow: inset 0 0 0 1px #ef3f3f; }
-    .no-touch .btn.btn-outline:hover {
-      color: #dcdee0;
-      background: #ef3f3f; }
-  @media only screen and (min-width: 768px) {
-    .btn {
-      font-size: 1.6rem; } }
-
-.cd-buttons .cd-box:nth-of-type(2) span {
-  /* CSS class name color */
-  color: #ef3f3f; }
 
 /* -------------------------------- 
 
@@ -531,26 +509,6 @@ section {
     clear: both;
     content: "";
     display: block; }
-  section:nth-of-type(1) h3::before {
-    content: '1. '; }
-  section:nth-of-type(2) h3::before {
-    content: '2. '; }
-  section:nth-of-type(3) h3::before {
-    content: '3. '; }
-  section:nth-of-type(4) h3::before {
-    content: '4. '; }
-  section:nth-of-type(5) h3::before {
-    content: '5. '; }
-  section:nth-of-type(6) h3::before {
-    content: '6. '; }
-  section:nth-of-type(7) h3::before {
-    content: '7. '; }
-  section:nth-of-type(8) h3::before {
-    content: '8. '; }
-  section:nth-of-type(9) h3::before {
-    content: '9. '; }
-  section:nth-of-type(10) h3::before {
-    content: '10. '; }
   @media only screen and (min-width: 768px) {
     section {
       margin: 3em 0 5em; } }
@@ -663,6 +621,12 @@ section {
     background: #ccdedc; }
   .cd-colors li:nth-of-type(6) .cd-color-swatch::after {
     background: #aecac6; }
+.cd-colors li:nth-of-type(7) .cd-color-swatch {
+  background: #f8f6e5; }
+  .cd-colors li:nth-of-type(7) .cd-color-swatch::before {
+    background: #fdfdf9; }
+  .cd-colors li:nth-of-type(7) .cd-color-swatch::after {
+    background: #f3efd1; }
 @media only screen and (min-width: 768px) {
   .cd-colors li {
     width: 19%;

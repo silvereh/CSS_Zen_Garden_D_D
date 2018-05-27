@@ -1,6 +1,19 @@
+/* -------------------------------- 
+
+Variables & Mixins
+
+-------------------------------- */
+
 @import 'partials/variables';
 @import 'partials/prefix-mixins';
-@import 'partials/layout'; // responsive grid and media queries
+
+/* -------------------------------- 
+
+Responsive Grid & Media Queries
+
+-------------------------------- */
+
+@import 'partials/layout';
 
 /* -------------------------------- 
 
@@ -28,7 +41,22 @@ xPatterns
 	padding: 6px;
 }
 
-@import "partials/navigation";
+
+/* -------------------------------- 
+
+xNavigation 
+
+-------------------------------- */
+
+header {
+	display: none;
+}
+
+.cd-navigation {
+	> div.cd-box {
+		@import "partials/navigation";
+	}
+}
 
 /* -------------------------------- 
 
@@ -45,6 +73,19 @@ main > h1 {
 	}
 }
 
+
+/* -------------------------------- 
+
+xTypography 
+
+-------------------------------- */
+
 @import "partials/typography";
-@import "partials/buttons";
+
+/* -------------------------------- 
+
+xBasic style
+
+-------------------------------- */
+
 @import 'partials/basic-style';
