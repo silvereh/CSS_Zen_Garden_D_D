@@ -74,6 +74,17 @@ xNavigation
 header {
   display: none; }
 
+.cd-navigation > div.cd-box:before, .cd-navigation > div.cd-box:after {
+  content: "";
+  display: block;
+  background-color: black;
+  height: 10px; }
+.cd-navigation > div.cd-box:before {
+  clip-path: polygon(0px 10px, 100% 10px, calc(100% - 20px) 0px, calc(100% - 20px) 8px, 20px 8px, 20px 0px);
+  -webkit-clip-path: polygon(0px 10px, 100% 10px, calc(100% - 20px) 0px, calc(100% - 20px) 8px, 20px 8px, 20px 0px); }
+.cd-navigation > div.cd-box:after {
+  clip-path: polygon(20px 10px, 20px 2px, calc(100% - 20px) 2px, calc(100% - 20px) 10px, 100% 0px, 0px 0px);
+  -webkit-clip-path: polygon(20px 10px, 20px 2px, calc(100% - 20px) 2px, calc(100% - 20px) 10px, 100% 0px, 0px 0px); }
 .cd-navigation > div.cd-box > div {
   background-color: #dcdee0;
   padding: 2rem; }

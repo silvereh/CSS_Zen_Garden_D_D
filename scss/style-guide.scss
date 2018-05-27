@@ -54,6 +54,22 @@ header {
 
 .cd-navigation {
 	> div.cd-box {
+		&:before, &:after {
+			content: "";
+			display: block;
+			background-color: black;
+			height: 10px;
+		}
+
+		&:before {
+			clip-path: polygon(0px 10px,100% 10px,calc(100% - 20px) 0px,calc(100% - 20px) 8px,20px 8px,20px 0px);
+			-webkit-clip-path: polygon(0px 10px,100% 10px,calc(100% - 20px) 0px,calc(100% - 20px) 8px,20px 8px,20px 0px);
+		}
+
+		&:after {
+			clip-path: polygon(20px 10px,20px 2px,calc(100% - 20px) 2px,calc(100% - 20px) 10px,100% 0px,0px 0px);
+			-webkit-clip-path: polygon(20px 10px,20px 2px,calc(100% - 20px) 2px,calc(100% - 20px) 10px,100% 0px,0px 0px);
+		}
 		@import "partials/navigation";
 	}
 }
