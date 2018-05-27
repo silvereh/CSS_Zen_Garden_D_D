@@ -1,7 +1,5 @@
 > div {
 	background-color: $blue;
-	border-bottom: 2px solid black;
-	border-top: 2px solid black;
 	padding: 2rem;
 
 	> h3 {
@@ -19,10 +17,40 @@
 			padding: 0;
 
 			> li {
+				padding: 0.1rem 0;
 				> a {
 					color: $link-color;
 				}
 			}
 		}
+
+		&.cd-primary-nav {
+			> ul {
+				> li {
+					padding: 0.3rem 1rem;
+
+					&:nth-of-type(2n+1) {
+						background-color: $green;
+					}
+				}
+			}
+		}
 	}
+}
+
+&:before, &:after {
+	content: "";
+	display: block;
+	background-color: black;
+	height: 10px;
+}
+
+&:before {
+	clip-path: polygon(0px 10px,100% 10px,calc(100% - 20px) 0px,calc(100% - 20px) 8px,20px 8px,20px 0px);
+	-webkit-clip-path: polygon(0px 10px,100% 10px,calc(100% - 20px) 0px,calc(100% - 20px) 8px,20px 8px,20px 0px);
+}
+
+&:after {
+	clip-path: polygon(20px 10px,20px 2px,calc(100% - 20px) 2px,calc(100% - 20px) 10px,100% 0px,0px 0px);
+	-webkit-clip-path: polygon(20px 10px,20px 2px,calc(100% - 20px) 2px,calc(100% - 20px) 10px,100% 0px,0px 0px);
 }
