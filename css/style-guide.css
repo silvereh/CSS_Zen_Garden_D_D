@@ -82,7 +82,7 @@ header {
   .cd-navigation > div.cd-box > div > h3 {
     color: black;
     border-bottom: none;
-    font-family: sans-serif;
+    font-family: "ScalySansBold", sans-serif;
     font-size: 1.5rem;
     margin: 0.5rem 0; }
   .cd-navigation > div.cd-box > div > nav > ul {
@@ -91,48 +91,6 @@ header {
     padding: 0; }
     .cd-navigation > div.cd-box > div > nav > ul > li > a {
       color: #a1452e; }
-
-.cd-main-nav {
-  /* main navigation background color - full screen on small devices */
-  background: #8b281c; }
-  .cd-main-nav li a {
-    color: #dcdee0;
-    border-color: #a02e20; }
-  @media only screen and (min-width: 1024px) {
-    .cd-main-nav li a {
-      color: #e8958b; }
-      .cd-main-nav li a.selected {
-        color: #dcdee0;
-        box-shadow: 0 2px 0 #ef3f3f; }
-      .no-touch .cd-main-nav li a:hover {
-        color: #dcdee0; } }
-
-.cd-nav-trigger span {
-  /* hamburger menu */
-  background-color: #dcdee0; }
-  .cd-nav-trigger span::before, .cd-nav-trigger span::after {
-    /* upper and lower lines */
-    background-color: #dcdee0; }
-
-.nav-is-visible .cd-nav-trigger span {
-  /* hide line in the center on mobile when nav is visible */
-  background-color: rgba(220, 222, 224, 0); }
-  .nav-is-visible .cd-nav-trigger span::before, .nav-is-visible .cd-nav-trigger span::after {
-    /* preserve visibility of upper and lower lines - close icon */
-    background-color: #dcdee0; }
-
-.cd-download {
-  /* download button top-right visible on big devices */
-  background-color: #b53425; }
-  .no-touch .cd-download:hover {
-    background-color: #cb3a29; }
-  .cd-download span {
-    /* tooltip */
-    background: #ef3f3f;
-    color: #dcdee0; }
-    .cd-download span::before {
-      /* right arrow color */
-      border-color: #ef3f3f; }
 
 /* -------------------------------- 
 
@@ -177,19 +135,18 @@ h3 {
   font-size: 2rem;
   border-bottom: 1px solid #d3b63b;
   padding-bottom: .1rem; }
+  h3.nav {
+    font-family: "ScalySansBold", sans-serif;
+    font-size: 1.7rem;
+    color: black;
+    border-bottom: 0;
+    font-variant: small-caps; }
+    h3.nav::before {
+      content: none !important; }
 
 section > h3::before {
   /* number before each section title */
   color: #9e8723; }
-
-aside h3 {
-  font-family: "ScalySans", sans-serif;
-  font-size: 1.7rem;
-  color: black;
-  border-bottom: 0;
-  font-variant: small-caps; }
-  aside h3::before {
-    content: none !important; }
 
 p {
   font-size: 1.4rem;
