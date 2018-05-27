@@ -106,17 +106,6 @@ header {
     padding: 0.3rem 1rem; }
     .cd-navigation > div.cd-box > div > nav.cd-primary-nav > ul > li:nth-of-type(2n+1) {
       background-color: #bdd4d1; }
-.cd-navigation > div.cd-box:before, .cd-navigation > div.cd-box:after {
-  content: "";
-  display: block;
-  background-color: black;
-  height: 10px; }
-.cd-navigation > div.cd-box:before {
-  clip-path: polygon(0px 10px, 100% 10px, calc(100% - 20px) 0px, calc(100% - 20px) 8px, 20px 8px, 20px 0px);
-  -webkit-clip-path: polygon(0px 10px, 100% 10px, calc(100% - 20px) 0px, calc(100% - 20px) 8px, 20px 8px, 20px 0px); }
-.cd-navigation > div.cd-box:after {
-  clip-path: polygon(20px 10px, 20px 2px, calc(100% - 20px) 2px, calc(100% - 20px) 10px, 100% 0px, 0px 0px);
-  -webkit-clip-path: polygon(20px 10px, 20px 2px, calc(100% - 20px) 2px, calc(100% - 20px) 10px, 100% 0px, 0px 0px); }
 
 /* -------------------------------- 
 
