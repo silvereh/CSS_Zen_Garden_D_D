@@ -1,18 +1,18 @@
 
 // color palette - these colors will be the color swatches of the Colors section
 
-$color-1: #ef3f3f; // Color of the D&D logo
-$color-2: #8b281c; // Heading color
-$color-3: #a1452e; // Link color
-$color-4: #d3b63b; // <hr> color
-$color-5: #dcdee0; // Box text background color
-$color-6: #bdd4d1; // Box text row color
-$color-7: #f8f6e5; // Background color
+$logo-red: #ef3f3f; 			// Color of the D&D logo
+$heading-color: #8b281c; 		// Heading color
+$link-color: #a1452e; 			// Link color
+$heading-underline: #d3b63b; 	// <hr> color
+$blue: #dcdee0; 				// Box text background color
+$green: #bdd4d1; 				// Box text row color
+$background-color: #f8f6e5; 	// Background color
 
 // additional colors
 
-$success: #6fce72; // green
-$alert: $color-3;  // red
+$success: #6fce72; 		// green
+$alert: $link-color;  	// red
 
 // fonts
 
@@ -75,7 +75,7 @@ $alert: $color-3;  // red
 }
 
 $primary-font: 'Bookinsanity', serif;
-$secondary-font: 'MrEavesSmallCaps', serif;
-$tertiary-font: 'ScalySans', sans-serif;
-$quaternary-font: 'Nodesto', serif;
-$quinary-font: 'ZatannaMisdirection', sans-serif;
+$heading-font: 'MrEavesSmallCaps', serif;
+$text-box-font: 'ScalySans', sans-serif;
+$title-font: 'Nodesto', serif;
+$footer-font: 'ZatannaMisdirection', sans-serif;

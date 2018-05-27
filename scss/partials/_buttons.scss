@@ -11,19 +11,19 @@ xButtons
 	border-radius: .25em;
 	font: {
 		size: 1.4rem;
-		family: $secondary-font;
+		family: $heading-font;
 	}
-	color: $color-5;
+	color: $blue;
 	padding: .6em 2.2em;
 	cursor: pointer;
-	background: $color-1;
+	background: $logo-red;
 
 	&:focus {
 		outline: none;
 	}
 
 	.no-touch &:hover {
-		background: lighten($color-1, 5%);
+		background: lighten($logo-red, 5%);
 	}
 
 	&.btn-success {
@@ -43,13 +43,13 @@ xButtons
 	}
 
 	&.btn-outline {
-		color: $color-1;
+		color: $logo-red;
 		background: transparent;
-		box-shadow: inset 0 0 0 1px $color-1;
+		box-shadow: inset 0 0 0 1px $logo-red;
 
 		.no-touch &:hover {
-			color: $color-5;
-			background: $color-1;
+			color: $blue;
+			background: $logo-red;
 		}
 	}
 
@@ -60,5 +60,5 @@ xButtons
 
 .cd-buttons .cd-box:nth-of-type(2) span {
 	/* CSS class name color */ 
-	color: $color-1;
+	color: $logo-red;
 }

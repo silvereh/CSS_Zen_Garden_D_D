@@ -6,12 +6,12 @@ xTypography
 -------------------------------- */
 
 h2, h3 {
-	font-family: $secondary-font;
-	color: $color-2;
+	font-family: $heading-font;
+	color: $heading-color;
 }
 
 h1 {
-    font-family: $quaternary-font;
+    font-family: $title-font;
     color: white;
     letter-spacing: .025em;
     text-shadow:
@@ -60,13 +60,13 @@ h2 {
 h3 {
 	margin: 1em 0;
     font-size: 2rem;
-    border-bottom: 1px solid $color-4;
+    border-bottom: 1px solid $heading-underline;
     padding-bottom: .1rem;
 }
 
 section > h3::before {
 	/* number before each section title */
-	color: darken($color-4, 15%);
+	color: darken($heading-underline, 15%);
 }
 
 p {
@@ -75,28 +75,28 @@ p {
 	color: black;
 
 	a {
-		color: $color-3;
+		color: $link-color;
 	}
     
     &.opening{
-        font-family: $tertiary-font;
+        font-family: $text-box-font;
         font-size: 1.3rem;
         line-height: 1.4;
         padding: 10px;
-        background-color: $color-5;
-        border-left: 2px solid $color-2;
-        border-right: 2px solid $color-2;
+        background-color: $blue;
+        border-left: 2px solid $heading-color;
+        border-right: 2px solid $heading-color;
         position: relative;
         &::before,&::after{
             content: " ";
             display: block;
             height: 0px;
             width: calc(100% + (8px));
-            border-left: 6px dotted $color-2;
-            border-right: 6px dotted $color-2;
+            border-left: 6px dotted $heading-color;
+            border-right: 6px dotted $heading-color;
             padding: 3px 10px;
 //            border-radius: 100%;
-//            background-color: $color-2;
+//            background-color: $heading-color;
             position: absolute;
         }
         &::before{
@@ -110,6 +110,6 @@ p {
     }
     
     &.footer{
-        font-family: $quinary-font;
+        font-family: $footer-font;
     }
 }

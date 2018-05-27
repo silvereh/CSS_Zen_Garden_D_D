@@ -10,7 +10,7 @@ xBackground
 
 body {
 	/* this is the page background */
-	background-color: $color-7;
+	background-color: $$background-color;
 }
 
 /* -------------------------------- 
@@ -21,9 +21,9 @@ xPatterns
 
 .cd-box {
 	/* this is the container of various design elements - i.e. the 2 logo of the branding section */
-	border: 1px solid $color-4;
+	border: 1px solid $$heading-underline;
 	border-radius: 3px;
-	background: $color-7;
+	background: $$background-color;
 	box-shadow: 0 1px 1px rgba(#000, .05);
 	padding: 6px;
 }
