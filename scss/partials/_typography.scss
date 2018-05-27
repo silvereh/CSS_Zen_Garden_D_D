@@ -69,6 +69,17 @@ section > h3::before {
 	color: darken($heading-underline, 15%);
 }
 
+aside h3{
+    font-family: $text-box-font;
+    font-size: 1.7rem;
+    color: black;
+    border-bottom: 0;
+    font-variant: small-caps;
+    &::before{
+        content: none!important;
+    }
+}
+
 p {
 	font-size: 1.4rem;
 	line-height: 1.6;
