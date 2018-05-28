@@ -115,6 +115,14 @@ section {
 			margin-right: 0;
 		}
 	}
+
+	h2 {
+		+ ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+	}
 }
 
 /* xBranding section - basic style */
