@@ -95,13 +95,13 @@ p {
         &::before,&::after{
             content: " ";
             display: block;
-            height: 0px;
+            height: 6px;
             width: calc(100% + (8px));
             border-left: 6px dotted $heading-color;
             border-right: 6px dotted $heading-color;
-            padding: 3px 10px;
-//            border-radius: 100%;
-//            background-color: $heading-color;
+//            -webkit-border-image: url(../../assets/box-text-corner.png) 100 round;
+//            -o-border-image: url(../../assets/box-text-corner.png) 100 round;
+//            border-image: url(../../assets/box-text-corner.png) 100 round;
             position: absolute;
         }
         &::before{

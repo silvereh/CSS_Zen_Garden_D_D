@@ -181,11 +181,10 @@ p {
     p.opening::before, p.opening::after {
       content: " ";
       display: block;
-      height: 0px;
+      height: 6px;
       width: calc(100% + (8px));
       border-left: 6px dotted #8b281c;
       border-right: 6px dotted #8b281c;
-      padding: 3px 10px;
       position: absolute; }
     p.opening::before {
       top: -2px;
