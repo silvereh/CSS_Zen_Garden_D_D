@@ -97,12 +97,12 @@ p {
             display: block;
             height: 6px;
             width: calc(100% + (8px));
+            position: absolute;
             border-left: 6px dotted $heading-color;
             border-right: 6px dotted $heading-color;
-//            -webkit-border-image: url(../../assets/box-text-corner.png) 100 round;
-//            -o-border-image: url(../../assets/box-text-corner.png) 100 round;
-//            border-image: url(../../assets/box-text-corner.png) 100 round;
-            position: absolute;
+//            -webkit-border-image: url(../../assets/box-text-corner.svg) 100 round;
+//            -o-border-image: url(../../assets/box-text-corner.svg) 100 round;
+//            border-image: url(../../assets/box-text-corner.svg) 100 round;
         }
         &::before{
             top: -2px;
