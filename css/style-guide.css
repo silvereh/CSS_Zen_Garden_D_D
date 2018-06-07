@@ -177,21 +177,9 @@ p {
     background-color: #dcdee0;
     border-left: 2px solid #8b281c;
     border-right: 2px solid #8b281c;
-    position: relative; }
-    p.opening::before, p.opening::after {
-      content: " ";
-      display: block;
-      height: 6px;
-      width: calc(100% + (8px));
-      position: absolute;
-      border-left: 6px dotted #8b281c;
-      border-right: 6px dotted #8b281c; }
-    p.opening::before {
-      top: -2px;
-      left: -4px; }
-    p.opening::after {
-      bottom: -2px;
-      right: -4px; }
+    position: relative;
+    border-image: url(../assets/box-text-corner.svg) 27/6px/3px;
+    margin: 3px; }
   p.footer {
     font-family: "ZatannaMisdirection", sans-serif; }
 

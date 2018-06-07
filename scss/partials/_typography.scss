@@ -92,28 +92,9 @@ p {
         border-left: 2px solid $heading-color;
         border-right: 2px solid $heading-color;
         position: relative;
-        &::before,&::after{
-            content: " ";
-            display: block;
-            height: 6px;
-            width: calc(100% + (8px));
-            position: absolute;
-            border-left: 6px dotted $heading-color;
-            border-right: 6px dotted $heading-color;
-//            -webkit-border-image: url(../../assets/box-text-corner.svg) 100 round;
-//            -o-border-image: url(../../assets/box-text-corner.svg) 100 round;
-//            border-image: url(../../assets/box-text-corner.svg) 100 round;
-        }
-        &::before{
-            top: -2px;
-            left: -4px;  
-        }
-        &::after{
-            bottom: -2px;
-            right: -4px;
-        }
+        border-image: url(../assets/box-text-corner.svg) 27 / 6px / 3px;
+        margin: 3px;
     }
-    
     &.footer{
         font-family: $footer-font;
     }
