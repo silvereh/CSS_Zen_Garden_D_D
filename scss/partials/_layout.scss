@@ -1,27 +1,47 @@
-// breakpoints
-   
-$S:     768px;   
-$M:     1024px;     
-$L:     1600px;   
-
-// media queries
-
-@mixin MQ($canvas) {
-  @if $canvas == S {
-   @media only screen and (min-width: $S) { @content; } 
-  }
-  @else if $canvas == M {
-   @media only screen and (min-width: $M) { @content; } 
-  }
-  @else if $canvas == L {
-   @media only screen and (min-width: $L) { @content; } 
-  }
+// Minimum breakpoint width. Null for the smallest (first) breakpoint.
+//
+// >> breakpoint-min(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
+// 576px
+@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
+	$min: map-get($breakpoints, $name);
+	@return if($min != 0, $min, null);
 }
 
-// super light grid - it works with the .cd-container class inside style.scss
-
-@mixin column($percentage, $float-direction:left) {
-  width: 100% * $percentage;
-  float: $float-direction;
+// Media of at least the minimum breakpoint width. No query for the smallest breakpoint.
+// Makes the @content apply to the given breakpoint and wider.
+@mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
+	$min: breakpoint-min($name, $breakpoints);
+	@if $min {
+		@media (min-width: $min) {
+			@content;
+		}
+	} @else {
+		@content;
+	}
 }
 
+@mixin make-grid() {
+	@supports (display: grid) {
+		display: grid;
+	}
+	@supports not (display: grid) {
+		display: flex;
+	}
+}
+
+@mixin make-columns() {
+	@each $breakpoint, $main-cell-max-width in $max-widths {
+		@include media-breakpoint-up($breakpoint, $breakpoints) {
+			grid-template-columns: [outer-left] 1fr [inner-left] $main-cell-max-width [inner-right] 1fr [outer-right];
+		}
+	}
+}
+
+.page-wrapper {
+	@include make-grid;
+
+	> section,
+	> div {
+		display: contents;
+	}
+}

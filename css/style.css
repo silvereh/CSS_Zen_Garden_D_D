@@ -1,0 +1,149 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css";
+/* --------------------------------
+
+Variables & Mixins
+
+-------------------------------- */
+@font-face {
+  font-family: Bookinsanity;
+  src: url(../assets/fonts/Bookinsanity.otf); }
+@font-face {
+  font-family: BookinsanityBold;
+  src: url(../assets/fonts/BookinsanityBold.otf); }
+@font-face {
+  font-family: BookinsanityItalic;
+  src: url(../assets/fonts/BookinsanityItalic.otf); }
+@font-face {
+  font-family: BookinsanityBoldItalic;
+  src: url(../assets/fonts/BookinsanityBoldItalic.otf); }
+@font-face {
+  font-family: MrEavesSmallCaps;
+  src: url(../assets/fonts/MrEavesSmallCaps.otf); }
+@font-face {
+  font-family: ScalySans;
+  src: url(../assets/fonts/ScalySans.otf); }
+@font-face {
+  font-family: ScalySansBold;
+  src: url(../assets/fonts/ScalySansBold.otf); }
+@font-face {
+  font-family: ScalySansItalic;
+  src: url(../assets/fonts/ScalySansItalic.otf); }
+@font-face {
+  font-family: ScalySansBoldItalic;
+  src: url(../assets/fonts/ScalySansBoldItalic.otf); }
+@font-face {
+  font-family: Nodesto;
+  src: url(../assets/fonts/NodestoCapsCondensed.otf); }
+@font-face {
+  font-family: ZatannaMisdirection;
+  src: url(../assets/fonts/ZatannaMisdirection.otf); }
+@font-face {
+  font-family: ZatannaMisdirectionItalic;
+  src: url(../assets/fonts/ZatannaMisdirectionItalic.otf); }
+/* --------------------------------
+
+Responsive Grid & Media Queries
+
+-------------------------------- */
+@supports (display: grid) {
+  .page-wrapper {
+    display: grid; } }
+@supports not (display: grid) {
+  .page-wrapper {
+    display: flex; } }
+.page-wrapper > section,
+.page-wrapper > div {
+  display: contents; }
+
+/* --------------------------------
+
+xNavigation
+
+-------------------------------- */
+> div {
+  background-color: #dcdee0;
+  padding: 2rem; }
+  > div > h3 {
+    color: black;
+    border-bottom: none;
+    font-family: "ScalySansBold", sans-serif;
+    font-size: 1.5rem;
+    margin: 0.5rem 0; }
+  > div > nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    > div > nav > ul > li {
+      padding: 0.1rem 0; }
+      > div > nav > ul > li > a {
+        color: #a1452e; }
+  > div > nav.cd-primary-nav > ul > li {
+    padding: 0.3rem 1rem; }
+    > div > nav.cd-primary-nav > ul > li:nth-of-type(2n+1) {
+      background-color: #bdd4d1; }
+
+/* --------------------------------
+
+xTypography
+
+-------------------------------- */
+h2, h3 {
+  font-family: "MrEavesSmallCaps", serif;
+  color: #8b281c; }
+
+h1 {
+  font-family: "Nodesto", serif;
+  color: white;
+  letter-spacing: .025em;
+  text-shadow: -3px -3px 0px black, 3px 3px 0px black, -3px 3px 0px black, 3px -3px 0px black, -3px -2px 0px black, 3px 2px 0px black, -3px 2px 0px black, 3px -2px 0px black, -3px -1px 0px black, 3px 1px 0px black, -3px 1px 0px black, 3px -1px 0px black, -3px 0px 0px black, 3px 0px 0px black, -2px -3px 0px black, 2px 3px 0px black, -2px 3px 0px black, 2px -3px 0px black, -1px -3px 0px black, 1px 3px 0px black, -1px 3px 0px black, 1px -3px 0px black, 0px -3px 0px black, 0px 3px 0px black;
+  text-transform: uppercase;
+  font-size: 5.4rem;
+  line-height: 1.2;
+  margin: 0 0 .4em; }
+  @media (min-width: 76.8rem) {
+    h1 {
+      font-size: 7.6rem; } }
+
+h2 {
+  margin: 1em 0;
+  font-size: 3rem; }
+
+h3 {
+  margin: 1em 0;
+  font-size: 2rem;
+  border-bottom: 1px solid #d3b63b;
+  padding-bottom: .1rem; }
+  h3.nav {
+    font-family: "ScalySansBold", sans-serif;
+    font-size: 1.7rem;
+    color: black;
+    border-bottom: 0;
+    font-variant: small-caps; }
+    h3.nav::before {
+      content: none !important; }
+
+section > h3::before {
+  /* number before each section title */
+  color: #9e8723; }
+
+p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: black; }
+  p a {
+    color: #a1452e; }
+  p.opening {
+    font-family: "ScalySans", sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.4;
+    padding: 10px;
+    background-color: #dcdee0;
+    border-left: 2px solid #8b281c;
+    border-right: 2px solid #8b281c;
+    position: relative;
+    border-image: url(../assets/box-text-corner.svg) 27/6px/3px;
+    margin: 3px; }
+  p.footer {
+    font-family: "ZatannaMisdirection", sans-serif; }
+
+/*# sourceMappingURL=style.css.map */

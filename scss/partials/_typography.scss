@@ -4,75 +4,72 @@ h2, h3 {
 }
 
 h1 {
-    font-family: $title-font;
-    color: white;
-    letter-spacing: .025em;
-    text-shadow:
-        -3px -3px 0px black,
-        3px 3px 0px black,
-        -3px 3px 0px black,
-        3px -3px 0px black,
-        -3px -2px 0px black,
-        3px 2px 0px black,
-        -3px 2px 0px black,
-        3px -2px 0px black,
-        -3px -1px 0px black,
-        3px 1px 0px black,
-        -3px 1px 0px black,
-        3px -1px 0px black,
-        -3px 0px 0px black,
-        3px 0px 0px black,
-        -2px -3px 0px black,
-        2px 3px 0px black,
-        -2px 3px 0px black,
-        2px -3px 0px black,
-        -1px -3px 0px black,
-        1px 3px 0px black,
-        -1px 3px 0px black,
-        1px -3px 0px black,
-        0px -3px 0px black,
-        0px 3px 0px black;
-//    -webkit-text-stroke: .3px black;
-//    text-stroke: .3px black;
-    text-transform: uppercase;
+	font-family: $title-font;
+	color: white;
+	letter-spacing: .025em;
+	text-shadow: 	-3px -3px 0px black,
+								3px 3px 0px black,
+								-3px 3px 0px black,
+								3px -3px 0px black,
+								-3px -2px 0px black,
+								3px 2px 0px black,
+								-3px 2px 0px black,
+								3px -2px 0px black,
+								-3px -1px 0px black,
+								3px 1px 0px black,
+								-3px 1px 0px black,
+								3px -1px 0px black,
+								-3px 0px 0px black,
+								3px 0px 0px black,
+								-2px -3px 0px black,
+								2px 3px 0px black,
+								-2px 3px 0px black,
+								2px -3px 0px black,
+								-1px -3px 0px black,
+								1px 3px 0px black,
+								-1px 3px 0px black,
+								1px -3px 0px black,
+								0px -3px 0px black,
+								0px 3px 0px black;
+	// -webkit-text-stroke: .3px black;
+	// text-stroke: .3px black;
+	text-transform: uppercase;
 	font-size: 5.4rem;
 	line-height: 1.2;
 	margin: 0 0 .4em;
 
-	@include MQ(S) {
+	@include media-breakpoint-up(sm) {
 		font-size: 7.6rem;
-//        -webkit-text-stroke-width: .5px;
+		// -webkit-text-stroke-width: .5px;
 	}
 }
 
 h2 {
 	margin: 1em 0;
-    font-size: 3rem;
+	font-size: 3rem;
 }
 
 h3 {
 	margin: 1em 0;
-    font-size: 2rem;
-    border-bottom: 1px solid $heading-underline;
-    padding-bottom: .1rem;
-    &.nav{
-        font-family: $nav-heading-font;
-        font-size: 1.7rem;
-        color: black;
-        border-bottom: 0;
-        font-variant: small-caps;
-        &::before{
-            content: none!important;
-        }
-    }
+	font-size: 2rem;
+	border-bottom: 1px solid $heading-underline;
+	padding-bottom: .1rem;
+	&.nav{
+		font-family: $nav-heading-font;
+		font-size: 1.7rem;
+		color: black;
+		border-bottom: 0;
+		font-variant: small-caps;
+		&::before{
+			content: none!important;
+		}
+	}
 }
 
 section > h3::before {
 	/* number before each section title */
 	color: darken($heading-underline, 15%);
 }
-
-
 
 p {
 	font-size: 1.4rem;
@@ -82,20 +79,20 @@ p {
 	a {
 		color: $link-color;
 	}
-    
-    &.opening{
-        font-family: $text-box-font;
-        font-size: 1.3rem;
-        line-height: 1.4;
-        padding: 10px;
-        background-color: $blue;
-        border-left: 2px solid $heading-color;
-        border-right: 2px solid $heading-color;
-        position: relative;
-        border-image: url(../assets/box-text-corner.svg) 27 / 6px / 3px;
-        margin: 3px;
-    }
-    &.footer{
-        font-family: $footer-font;
-    }
+
+	&.opening{
+		font-family: $text-box-font;
+		font-size: 1.3rem;
+		line-height: 1.4;
+		padding: 10px;
+		background-color: $blue;
+		border-left: 2px solid $heading-color;
+		border-right: 2px solid $heading-color;
+		position: relative;
+		border-image: url(../assets/box-text-corner.svg) 27 / 6px / 3px;
+		margin: 3px;
+	}
+	&.footer{
+		font-family: $footer-font;
+	}
 }

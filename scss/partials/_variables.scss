@@ -1,77 +1,88 @@
+// Will ensure maps are ordered.
+@mixin _assert-ascending($map, $map-name) {
+	$prev-key: null;
+	$prev-num: null;
+	@each $key, $num in $map {
+		@if $prev-num == null {
+			// Do nothing
+		} @else if not comparable($prev-num, $num) {
+			@warn "Potentially invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} whose unit makes it incomparable to #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+		} @else if $prev-num >= $num {
+			@warn "Invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} which isn't greater than #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+		}
+		$prev-key: $key;
+		$prev-num: $num;
+	}
+}
 
 // color palette - these colors will be the color swatches of the Colors section
 
-$logo-red: #ef3f3f; 			// Color of the D&D logo
-$heading-color: #8b281c; 		// Heading color
-$link-color: #a1452e; 			// Link color
-$heading-underline: #d3b63b; 	// <hr> color
-$blue: #dcdee0; 				// Box text background color
-$green: #bdd4d1; 				// Box text row color
-$background-color: #f8f6e5; 	// Background color
-
-// additional colors
-
-$success: #6fce72; 		// green
-$alert: $link-color;  	// red
+$logo-red: #ef3f3f;             // Color of the D&D logo
+$heading-color: #8b281c;        // Heading color
+$link-color: #a1452e;           // Link color
+$heading-underline: #d3b63b;    // <hr> color
+$blue: #dcdee0;                 // Box text background color
+$green: #bdd4d1;                // Box text row color
+$background-color: #f8f6e5;     // Background color
 
 // fonts
 
 //Bookinsanity
 @font-face {
-    font-family: Bookinsanity;
-    src: url(../assets/fonts/Bookinsanity.otf);
+	font-family: Bookinsanity;
+	src: url(../assets/fonts/Bookinsanity.otf);
 }
 @font-face {
-    font-family: BookinsanityBold;
-    src: url(../assets/fonts/BookinsanityBold.otf);
+	font-family: BookinsanityBold;
+	src: url(../assets/fonts/BookinsanityBold.otf);
 }
 @font-face {
-    font-family: BookinsanityItalic;
-    src: url(../assets/fonts/BookinsanityItalic.otf);
+	font-family: BookinsanityItalic;
+	src: url(../assets/fonts/BookinsanityItalic.otf);
 }
 @font-face {
-    font-family: BookinsanityBoldItalic;
-    src: url(../assets/fonts/BookinsanityBoldItalic.otf);
+	font-family: BookinsanityBoldItalic;
+	src: url(../assets/fonts/BookinsanityBoldItalic.otf);
 }
 
 //MrEavesSmallCaps
 @font-face {
-    font-family: MrEavesSmallCaps;
-    src: url(../assets/fonts/MrEavesSmallCaps.otf);
+	font-family: MrEavesSmallCaps;
+	src: url(../assets/fonts/MrEavesSmallCaps.otf);
 }
 
 //ScalySans
 @font-face {
-    font-family: ScalySans;
-    src: url(../assets/fonts/ScalySans.otf);
+	font-family: ScalySans;
+	src: url(../assets/fonts/ScalySans.otf);
 }
 @font-face {
-    font-family: ScalySansBold;
-    src: url(../assets/fonts/ScalySansBold.otf);
+	font-family: ScalySansBold;
+	src: url(../assets/fonts/ScalySansBold.otf);
 }
 @font-face {
-    font-family: ScalySansItalic;
-    src: url(../assets/fonts/ScalySansItalic.otf);
+	font-family: ScalySansItalic;
+	src: url(../assets/fonts/ScalySansItalic.otf);
 }
 @font-face {
-    font-family: ScalySansBoldItalic;
-    src: url(../assets/fonts/ScalySansBoldItalic.otf);
+	font-family: ScalySansBoldItalic;
+	src: url(../assets/fonts/ScalySansBoldItalic.otf);
 }
 
 //Nodesto
 @font-face {
-    font-family: Nodesto;
-    src: url(../assets/fonts/NodestoCapsCondensed.otf);
+	font-family: Nodesto;
+	src: url(../assets/fonts/NodestoCapsCondensed.otf);
 }
 
 //ZatannaMisdirection
 @font-face {
-    font-family: ZatannaMisdirection;
-    src: url(../assets/fonts/ZatannaMisdirection.otf);
+	font-family: ZatannaMisdirection;
+	src: url(../assets/fonts/ZatannaMisdirection.otf);
 }
 @font-face {
-    font-family: ZatannaMisdirectionItalic;
-    src: url(../assets/fonts/ZatannaMisdirectionItalic.otf);
+	font-family: ZatannaMisdirectionItalic;
+	src: url(../assets/fonts/ZatannaMisdirectionItalic.otf);
 }
 
 $primary-font: 'Bookinsanity', serif;
@@ -80,3 +91,21 @@ $text-box-font: 'ScalySans', sans-serif;
 $title-font: 'Nodesto', serif;
 $footer-font: 'ZatannaMisdirection', sans-serif;
 $nav-heading-font: 'ScalySansBold', sans-serif;
+
+// Grid system
+$grid-breakpoints: (
+	xs: 0,
+	sm: 76.8rem,
+	md: 99.2rem,
+	lg: 140rem
+) !default;
+@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+
+$main-cell-max-widths: (
+	sm: 40rem,
+	md: 34rem,
+	lg: 34rem
+) !default;
+@include _assert-ascending($main-cell-max-widths, "$main-cell-max-widths");
+
+$grid-gap: 3.2rem !default;
