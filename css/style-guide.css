@@ -1,423 +1,76 @@
-/* -------------------------------- 
+/*
+Error: Undefined mixin 'MQ'.
+        on line 86 of style-guide.scss, in `MQ'
+        from line 86 of style-guide.scss
 
-Variables & Mixins
+81: -------------------------------- *\/
+82: 
+83: main > h1 {
+84: 	color: white;
+85: 
+86: 	@include MQ(L) {
+87: 		/* title goes into the header on big devices *\/
+88: 		color: white;
+89: 	}
+90: }
+91: 
 
--------------------------------- */
-@font-face {
-  font-family: Bookinsanity;
-  src: url(../assets/fonts/Bookinsanity.otf); }
-@font-face {
-  font-family: BookinsanityBold;
-  src: url(../assets/fonts/BookinsanityBold.otf); }
-@font-face {
-  font-family: BookinsanityItalic;
-  src: url(../assets/fonts/BookinsanityItalic.otf); }
-@font-face {
-  font-family: BookinsanityBoldItalic;
-  src: url(../assets/fonts/BookinsanityBoldItalic.otf); }
-@font-face {
-  font-family: MrEavesSmallCaps;
-  src: url(../assets/fonts/MrEavesSmallCaps.otf); }
-@font-face {
-  font-family: ScalySans;
-  src: url(../assets/fonts/ScalySans.otf); }
-@font-face {
-  font-family: ScalySansBold;
-  src: url(../assets/fonts/ScalySansBold.otf); }
-@font-face {
-  font-family: ScalySansItalic;
-  src: url(../assets/fonts/ScalySansItalic.otf); }
-@font-face {
-  font-family: ScalySansBoldItalic;
-  src: url(../assets/fonts/ScalySansBoldItalic.otf); }
-@font-face {
-  font-family: Nodesto;
-  src: url(../assets/fonts/NodestoCapsCondensed.otf); }
-@font-face {
-  font-family: ZatannaMisdirection;
-  src: url(../assets/fonts/ZatannaMisdirection.otf); }
-@font-face {
-  font-family: ZatannaMisdirectionItalic;
-  src: url(../assets/fonts/ZatannaMisdirectionItalic.otf); }
-/* -------------------------------- 
-
-Responsive Grid & Media Queries
-
--------------------------------- */
-/* -------------------------------- 
-
-xBackground 
-
--------------------------------- */
-body {
-  /* this is the page background */
-  background-color: #f8f6e5; }
-
-/* -------------------------------- 
-
-xPatterns
-
--------------------------------- */
-.cd-box {
-  /* this is the container of various design elements - i.e. the 2 logo of the branding section */
-  border: 1px solid #d3b63b;
-  border-radius: 3px;
-  background: #f8f6e5;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-  padding: 6px; }
-
-/* -------------------------------- 
-
-xNavigation 
-
--------------------------------- */
-header {
-  display: none; }
-
-.cd-navigation > div.cd-box:before, .cd-navigation > div.cd-box:after {
-  content: "";
-  display: block;
-  background-color: black;
-  height: 10px; }
-.cd-navigation > div.cd-box:before {
-  clip-path: polygon(0px 10px, 100% 10px, calc(100% - 20px) 0px, calc(100% - 20px) 8px, 20px 8px, 20px 0px);
-  -webkit-clip-path: polygon(0px 10px, 100% 10px, calc(100% - 20px) 0px, calc(100% - 20px) 8px, 20px 8px, 20px 0px); }
-.cd-navigation > div.cd-box:after {
-  clip-path: polygon(20px 10px, 20px 2px, calc(100% - 20px) 2px, calc(100% - 20px) 10px, 100% 0px, 0px 0px);
-  -webkit-clip-path: polygon(20px 10px, 20px 2px, calc(100% - 20px) 2px, calc(100% - 20px) 10px, 100% 0px, 0px 0px); }
-.cd-navigation > div.cd-box > div {
-  background-color: #dcdee0;
-  padding: 2rem; }
-  .cd-navigation > div.cd-box > div > h3 {
-    color: black;
-    border-bottom: none;
-    font-family: "ScalySansBold", sans-serif;
-    font-size: 1.5rem;
-    margin: 0.5rem 0; }
-  .cd-navigation > div.cd-box > div > nav > ul {
-    list-style: none;
-    margin: 0;
-    padding: 0; }
-    .cd-navigation > div.cd-box > div > nav > ul > li {
-      padding: 0.1rem 0; }
-      .cd-navigation > div.cd-box > div > nav > ul > li > a {
-        color: #a1452e; }
-  .cd-navigation > div.cd-box > div > nav.cd-primary-nav > ul > li {
-    padding: 0.3rem 1rem; }
-    .cd-navigation > div.cd-box > div > nav.cd-primary-nav > ul > li:nth-of-type(2n+1) {
-      background-color: #bdd4d1; }
-
-/* -------------------------------- 
-
-xPage title 
-
--------------------------------- */
-main > h1 {
-  color: white; }
-  @media only screen and (min-width: 1600px) {
-    main > h1 {
-      /* title goes into the header on big devices */
-      color: white; } }
-
-/* -------------------------------- 
-
-xTypography 
-
--------------------------------- */
-h2, h3 {
-  font-family: "MrEavesSmallCaps", serif;
-  color: #8b281c; }
-
-h1 {
-  font-family: "Nodesto", serif;
-  color: white;
-  letter-spacing: .025em;
-  text-shadow: -3px -3px 0px black, 3px 3px 0px black, -3px 3px 0px black, 3px -3px 0px black, -3px -2px 0px black, 3px 2px 0px black, -3px 2px 0px black, 3px -2px 0px black, -3px -1px 0px black, 3px 1px 0px black, -3px 1px 0px black, 3px -1px 0px black, -3px 0px 0px black, 3px 0px 0px black, -2px -3px 0px black, 2px 3px 0px black, -2px 3px 0px black, 2px -3px 0px black, -1px -3px 0px black, 1px 3px 0px black, -1px 3px 0px black, 1px -3px 0px black, 0px -3px 0px black, 0px 3px 0px black;
-  text-transform: uppercase;
-  font-size: 5.4rem;
-  line-height: 1.2;
-  margin: 0 0 .4em; }
-  @media only screen and (min-width: 768px) {
-    h1 {
-      font-size: 7.6rem; } }
-
-h2 {
-  margin: 1em 0;
-  font-size: 3rem; }
-
-h3 {
-  margin: 1em 0;
-  font-size: 2rem;
-  border-bottom: 1px solid #d3b63b;
-  padding-bottom: .1rem; }
-  h3.nav {
-    font-family: "ScalySansBold", sans-serif;
-    font-size: 1.7rem;
-    color: black;
-    border-bottom: 0;
-    font-variant: small-caps; }
-    h3.nav::before {
-      content: none !important; }
-
-section > h3::before {
-  /* number before each section title */
-  color: #9e8723; }
-
-p {
-  font-size: 1.4rem;
-  line-height: 1.6;
-  color: black; }
-  p a {
-    color: #a1452e; }
-  p.opening {
-    font-family: "ScalySans", sans-serif;
-    font-size: 1.3rem;
-    line-height: 1.4;
-    padding: 10px;
-    background-color: #dcdee0;
-    border-left: 2px solid #8b281c;
-    border-right: 2px solid #8b281c;
-    position: relative;
-    border-image: url(../assets/box-text-corner.svg) 27/6px/3px;
-    margin: 3px; }
-  p.footer {
-    font-family: "ZatannaMisdirection", sans-serif; }
-
-/* -------------------------------- 
-
-xBasic style
-
--------------------------------- */
-*, *::after, *::before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
-html * {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-
-html {
-  font-size: 62.5%; }
-
-body {
-  font-size: 1.6rem;
-  font-family: "Bookinsanity", serif; }
-
-a {
-  text-decoration: none; }
-
-img {
-  max-width: 100%; }
-
-input, textarea, select {
-  font-family: "Bookinsanity", serif;
-  font-size: 1.6rem; }
-
-header {
-  position: fixed;
-  height: 50px;
-  width: 100%;
-  top: 0;
-  left: 0;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  z-index: 10; }
-  header nav {
-    display: inline-block; }
-  @media only screen and (min-width: 1024px) {
-    header {
-      height: 80px; }
-      header::after {
-        clear: both;
-        content: "";
-        display: block; } }
-
-.cd-logo {
-  display: inline-block;
-  height: 100%;
-  position: relative; }
-  .cd-logo img {
-    position: absolute;
-    display: block;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -o-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%); }
-  @media only screen and (min-width: 1600px) {
-    .cd-logo {
-      margin-left: 5%; } }
-
-main {
-  width: 90%;
-  max-width: 1024px;
-  margin: 0 auto;
-  padding: 50px 0; }
-  main > h1 {
-    text-align: center;
-    margin: 3em 0; }
-  @media only screen and (min-width: 1024px) {
-    main {
-      padding-top: 80px; } }
-  @media only screen and (min-width: 1600px) {
-    main {
-      max-width: none;
-      padding: 120px 0 50px; }
-      main > h1 {
-        position: fixed;
-        top: 0;
-        left: 50%;
-        height: 80px;
-        line-height: 80px;
-        width: 400px;
-        margin: 0 0 0 -200px;
-        font-size: 2.6rem;
-        z-index: 20; } }
-
-section {
-  margin: 3em 0; }
-  section::after {
-    clear: both;
-    content: "";
-    display: block; }
-  @media only screen and (min-width: 768px) {
-    section {
-      margin: 3em 0 5em; } }
-  @media only screen and (min-width: 1600px) {
-    section {
-      width: 48%;
-      float: left;
-      margin: 0 4% 4em 0; }
-      section:nth-of-type(2n) {
-        margin-right: 0; } }
-  section h2 + ul {
-    list-style: none;
-    margin: 0;
-    padding: 0; }
-
-/* xBranding section - basic style */
-.cd-branding .cd-box {
-  margin-bottom: 1em; }
-.cd-branding img {
-  display: block;
-  width: 100%; }
-.cd-branding ul:last-of-type {
-  padding-top: .6em; }
-  .cd-branding ul:last-of-type li {
-    display: inline-block;
-    margin-right: 1em; }
-  .cd-branding ul:last-of-type li:nth-of-type(1) img {
-    width: 90px;
-    height: 90px;
-    border-radius: 1em; }
-  .cd-branding ul:last-of-type li:nth-of-type(2) img {
-    width: 60px;
-    height: 60px;
-    border-radius: .6em; }
-  .cd-branding ul:last-of-type li:nth-of-type(3) img {
-    width: 32px;
-    height: 32px;
-    border-radius: .4em; }
-  .cd-branding ul:last-of-type li:nth-of-type(4) img {
-    width: 16px;
-    height: 16px;
-    border-radius: .2em; }
-@media only screen and (min-width: 768px) {
-  .cd-branding .cd-box {
-    width: 49%;
-    float: left;
-    margin: 0 2% 2em 0; }
-    .cd-branding .cd-box:nth-of-type(2n) {
-      margin-right: 0; }
-  .cd-branding ul:last-of-type {
-    clear: left; }
-    .cd-branding ul:last-of-type li {
-      margin-right: 3em; } }
-
-/* xColor section - basic style */
-.cd-colors li {
-  text-align: center;
-  width: 48%;
-  float: left;
-  margin: 0 4% 1em 0; }
-  .cd-colors li:nth-of-type(2n) {
-    margin-right: 0; }
-.cd-colors .cd-color-swatch {
-  position: relative;
-  width: 100%;
-  padding: 50% 0; }
-  .cd-colors .cd-color-swatch::before, .cd-colors .cd-color-swatch::after {
-    /* lighter and darker color shades of the same swatch */
-    content: '';
-    position: absolute;
-    bottom: 0;
-    width: 50%;
-    height: 20%; }
-  .cd-colors .cd-color-swatch::before {
-    left: 0; }
-  .cd-colors .cd-color-swatch::after {
-    right: 0; }
-.cd-colors b {
-  display: block;
-  padding: .6em 0; }
-.cd-colors li:nth-of-type(1) .cd-color-swatch {
-  background: #ef3f3f; }
-  .cd-colors li:nth-of-type(1) .cd-color-swatch::before {
-    background: #f15757; }
-  .cd-colors li:nth-of-type(1) .cd-color-swatch::after {
-    background: #ed2727; }
-.cd-colors li:nth-of-type(2) .cd-color-swatch {
-  background: #8b281c; }
-  .cd-colors li:nth-of-type(2) .cd-color-swatch::before {
-    background: #a02e20; }
-  .cd-colors li:nth-of-type(2) .cd-color-swatch::after {
-    background: #762218; }
-.cd-colors li:nth-of-type(3) .cd-color-swatch {
-  background: #a1452e; }
-  .cd-colors li:nth-of-type(3) .cd-color-swatch::before {
-    background: #b54e34; }
-  .cd-colors li:nth-of-type(3) .cd-color-swatch::after {
-    background: #8d3d28; }
-.cd-colors li:nth-of-type(4) .cd-color-swatch {
-  background: #d3b63b; }
-  .cd-colors li:nth-of-type(4) .cd-color-swatch::before {
-    background: #d8be50; }
-  .cd-colors li:nth-of-type(4) .cd-color-swatch::after {
-    background: #c8aa2d; }
-.cd-colors li:nth-of-type(5) .cd-color-swatch {
-  background: #dcdee0; }
-  .cd-colors li:nth-of-type(5) .cd-color-swatch::before {
-    background: #eaebec; }
-  .cd-colors li:nth-of-type(5) .cd-color-swatch::after {
-    background: #ced1d4; }
-.cd-colors li:nth-of-type(6) .cd-color-swatch {
-  background: #bdd4d1; }
-  .cd-colors li:nth-of-type(6) .cd-color-swatch::before {
-    background: #ccdedc; }
-  .cd-colors li:nth-of-type(6) .cd-color-swatch::after {
-    background: #aecac6; }
-.cd-colors li:nth-of-type(7) .cd-color-swatch {
-  background: #f8f6e5; }
-  .cd-colors li:nth-of-type(7) .cd-color-swatch::before {
-    background: #fdfdf9; }
-  .cd-colors li:nth-of-type(7) .cd-color-swatch::after {
-    background: #f3efd1; }
-@media only screen and (min-width: 768px) {
-  .cd-colors li {
-    width: 19%;
-    float: left;
-    margin: 0 1.25% 1em 0; }
-    .cd-colors li:nth-of-type(2n) {
-      margin-right: 1.25%; }
-    .cd-colors li:nth-of-type(5n) {
-      margin-right: 0; } }
-
-.cd-typography .cd-box {
-  padding: 1em; }
-  @media only screen and (min-width: 768px) {
-    .cd-typography .cd-box .cd-box {
-      padding: 2em; } }
-
-/*# sourceMappingURL=style-guide.css.map */
+Backtrace:
+style-guide.scss:86:in `MQ'
+style-guide.scss:86
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:352:in `block in visit_mixin'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/stack.rb:98:in `block in with_mixin'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/stack.rb:135:in `with_frame'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/stack.rb:98:in `with_mixin'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:350:in `visit_mixin'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/stack.rb:135:in `with_frame'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:444:in `map'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/stack.rb:135:in `with_frame'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:52:in `map'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:161:in `visit'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:10:in `visit'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:209:in `each'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:320:in `block in watch'
+/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
+/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
+/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
+/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
+/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
+/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
+/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
+/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined mixin 'MQ'.\A         on line 86 of style-guide.scss, in `MQ'\A         from line 86 of style-guide.scss\A \A 81: -------------------------------- */\A 82: \A 83: main > h1 {\A 84: 	color: white;\A 85: \A 86: 	@include MQ(L) {\A 87: 		/* title goes into the header on big devices */\A 88: 		color: white;\A 89: 	}\A 90: }\A 91: "; }
