@@ -7,6 +7,27 @@
 	@return if($min != 0, $min, null);
 }
 
+@function cell-width($breakpoint) {
+	@return map-get($main-cell-max-widths, $breakpoint);
+}
+
+@mixin build-zone ($color: orange) {
+	background: $color;
+	border: 1px solid black;
+}
+
+@mixin build-pseudo-zone($content, $color: orange) {
+	@include build-zone($color);
+	color: black;
+	content: $content;
+	display: block;
+	font-family: sans-serif;
+	font-size: 2rem;
+	padding: 1rem;
+	text-align: center;
+	text-shadow: none;
+}
+
 // Media of at least the minimum breakpoint width. No query for the smallest breakpoint.
 // Makes the @content apply to the given breakpoint and wider.
 @mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
@@ -21,27 +42,136 @@
 }
 
 @mixin make-grid() {
-	@supports (display: grid) {
-		display: grid;
+	display: grid;
+}
+
+@mixin make-grid-columns() {
+	grid-template-columns: [main-left] [main-right];
+
+	@include media-breakpoint-up(sm) {
+		grid-template-columns: 1fr [main-left] cell-width(sm) [main-right] 1fr;
 	}
-	@supports not (display: grid) {
-		display: flex;
+
+	@include media-breakpoint-up(md) {
+		gap: $grid-gap;
+		grid-gap: $grid-gap;
+		grid-template-columns: 1fr [main-left] cell-width(md) [middle] cell-width(md) [main-right] 1fr;
+	}
+
+	@include media-breakpoint-up(lg) {
+		grid-template-columns: 1fr [main-left] (cell-width(lg) / 2) [footer-left] (cell-width(lg) / 2) [middle-left] (cell-width(lg) / 2) (cell-width(lg) / 2) [middle-right] (cell-width(lg) / 2) [footer-right] (cell-width(lg) / 2) [main-right] 1fr;
 	}
 }
 
-@mixin make-columns() {
-	@each $breakpoint, $main-cell-max-width in $max-widths {
-		@include media-breakpoint-up($breakpoint, $breakpoints) {
-			grid-template-columns: [outer-left] 1fr [inner-left] $main-cell-max-width [inner-right] 1fr [outer-right];
+@supports (display: grid) {
+	body {
+		@include make-grid;
+		@include make-grid-columns;
+
+		> .page-wrapper {
+			&,	
+			> section.intro,
+			> div {
+				display: contents;
+			}
 		}
-	}
-}
 
-.page-wrapper {
-	@include make-grid;
+		section.intro {
+			header {
+				grid-column: 1 / span end;
 
-	> section,
-	> div {
-		display: contents;
+				> h1 {
+					text-align: center;
+
+					&::before {
+						@include build-pseudo-zone("logo");
+					}
+
+					&::after {
+						@include build-pseudo-zone("separator");
+					}
+				}
+				
+				> h2 {
+					text-align: center;
+
+					&::before {
+						@include build-pseudo-zone("map");
+					}
+				}
+			}
+
+			> div {
+				@include media-breakpoint-up(sm) {
+					grid-column-start: main-left;
+				}
+			}
+		}
+
+		footer {
+			grid-row-start: 9;
+			text-align: center;
+
+			&::after {
+				@include build-pseudo-zone("disclaimer");
+			}
+		}
+
+		@include media-breakpoint-up(sm) {
+			section.intro > div,
+			div.main > div,
+			aside.sidebar,
+			footer {
+				grid-column-start: main-left;
+			}
+		}
+
+		@include media-breakpoint-up(md) {
+			div.summary,
+			footer {
+				grid-column: main-left / span main-right;
+			}
+
+			div.main > div.explanation,
+			div.main > div.benefits,
+			aside.sidebar {
+				grid-column-start: middle;
+			}
+
+			div.benefits {
+				&::after {
+					@include build-pseudo-zone("decor");
+				}
+			}
+
+			footer {
+				grid-row-start: 6;
+			}
+		}
+
+		@include media-breakpoint-up(lg) {
+			div.main > div.explanation,
+			div.main > div.requirements {
+				grid-column-start: middle-left;
+				grid-column-end: span 2;
+			}
+
+			div.main > div.participation,
+			aside.sidebar {
+				grid-column-start: middle-right;
+				grid-column-end: span 2;
+			}
+
+			div.preamble,
+			div.main > div.benefits {
+				grid-column-start: main-left;
+				grid-column-end: span 2;
+			}
+
+			footer {
+				grid-row-start: 5;
+				grid-column: footer-left / span footer-right;
+			}
+		}
 	}
 }

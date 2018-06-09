@@ -1,3 +1,16 @@
+@mixin opening {
+	font-family: $text-box-font;
+	font-size: 1.3rem;
+	line-height: 1.4;
+	padding: 10px;
+	background-color: $blue;
+	border-left: 2px solid $heading-color;
+	border-right: 2px solid $heading-color;
+	position: relative;
+	border-image: url(../assets/box-text-corner.svg) 27 / 6px / 3px;
+	margin: 3px;
+}
+
 h2, h3 {
 	font-family: $heading-font;
 	color: $heading-color;
@@ -46,7 +59,7 @@ h1 {
 
 h2 {
 	margin: 1em 0;
-	font-size: 3rem;
+	font-size: 2.8rem;
 }
 
 h3 {
@@ -64,6 +77,10 @@ h3 {
 			content: none!important;
 		}
 	}
+
+	+ p {
+		@include opening;
+	}
 }
 
 section > h3::before {
@@ -80,18 +97,6 @@ p {
 		color: $link-color;
 	}
 
-	&.opening{
-		font-family: $text-box-font;
-		font-size: 1.3rem;
-		line-height: 1.4;
-		padding: 10px;
-		background-color: $blue;
-		border-left: 2px solid $heading-color;
-		border-right: 2px solid $heading-color;
-		position: relative;
-		border-image: url(../assets/box-text-corner.svg) 27 / 6px / 3px;
-		margin: 3px;
-	}
 	&.footer{
 		font-family: $footer-font;
 	}
