@@ -237,9 +237,24 @@ h3 {
     background-color: #dcdee0;
     border-left: 2px solid #8b281c;
     border-right: 2px solid #8b281c;
-    position: relative;
-    border-image: url(../assets/box-text-corner.svg) 27/6px/3px;
-    margin: 3px; }
+    position: relative; }
+    h3 + p::before, h3 + p::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: calc(100% - 4px);
+      height: 12px;
+      margin-right: 10px;
+      border-left: 6px dotted #8b281c;
+      border-right: 6px dotted #8b281c; }
+    h3 + p::before {
+      border-image: url(../assets/box-text-corner-top.svg) 4/6px/0px;
+      top: -3px;
+      left: -4px; }
+    h3 + p::after {
+      border-image: url(../assets/box-text-corner-bottom.svg) 4/6px/0px;
+      bottom: -3px;
+      left: -4px; }
 
 section > h3::before {
   /* number before each section title */

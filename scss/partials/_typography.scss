@@ -7,8 +7,26 @@
 	border-left: 2px solid $heading-color;
 	border-right: 2px solid $heading-color;
 	position: relative;
-	border-image: url(../assets/box-text-corner.svg) 27 / 6px / 3px;
-	margin: 3px;
+    &::before, &::after{
+        content: "";
+        display: block;
+        position: absolute;
+        width: calc(100% - 4px);
+        height: 12px;
+        margin-right: 10px;
+        border-left: 6px dotted $heading-color;
+        border-right: 6px dotted $heading-color;
+    }
+    &::before{
+        border-image: url(../assets/box-text-corner-top.svg) 4 / 6px / 0px;
+        top: -3px;
+        left: -4px;
+    }
+    &::after{
+        border-image: url(../assets/box-text-corner-bottom.svg) 4 / 6px / 0px;
+        bottom: -3px;
+        left: -4px;
+    }
 }
 
 h2, h3 {
