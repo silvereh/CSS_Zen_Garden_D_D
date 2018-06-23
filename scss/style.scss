@@ -33,3 +33,21 @@ xTypography
 -------------------------------- */
 
 @import "partials/typography";
+
+// Background image
+
+body{
+    background: url(../assets/bg-top.jpg) no-repeat top, url(../assets/bg-middle.jpg) repeat-y center, url(../assets/bg-bottom.jpg) no-repeat bottom; 
+    background-color: black;
+    background-size: 300%;
+    padding: 7rem 1rem;
+    @include media-breakpoint-up(sm){
+        background-size: 100%;
+    }
+    @include media-breakpoint-up(md){
+        background-size: 1040px;
+    }
+    @include media-breakpoint-up(lg){
+        background-size: 1640px;
+    }
+}
