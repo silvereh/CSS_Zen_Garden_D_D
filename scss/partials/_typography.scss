@@ -1,7 +1,7 @@
 @mixin opening {
 	font-family: $text-box-font;
-	font-size: 1.3rem;
-	line-height: 1.4;
+	font-size: 11px;
+	line-height: 1.8;
 	padding: 10px;
 	background-color: $blue;
 	border-left: 2px solid $heading-color;
@@ -65,24 +65,24 @@ h1 {
 	// -webkit-text-stroke: .3px black;
 	// text-stroke: .3px black;
 	text-transform: uppercase;
-	font-size: 5.4rem;
+	font-size: 54px;
 	line-height: 1.2;
 	margin: 0 0 .4em;
 
 	@include media-breakpoint-up(sm) {
-		font-size: 7.6rem;
+		font-size: 72px;
 		// -webkit-text-stroke-width: .5px;
 	}
 }
 
 h2 {
 	margin: 1em 0;
-	font-size: 2.8rem;
+	font-size: 28px;
 }
 
 h3 {
 	margin: 1em 0;
-	font-size: 2rem;
+	font-size: 18px;
 	border-bottom: 1px solid $heading-underline;
 	padding-bottom: .1rem;
 	&.nav{
@@ -107,7 +107,7 @@ section > h3::before {
 }
 
 p {
-	font-size: 1.4rem;
+	font-size: 12px;
 	line-height: 1.6;
 	color: black;
 

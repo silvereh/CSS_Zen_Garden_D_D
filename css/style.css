@@ -69,40 +69,34 @@ Responsive Grid & Media Queries
       body section.intro header > h1 {
         text-align: center; }
         body section.intro header > h1::before {
-          background: orange;
-          border: 1px solid black;
-          color: black;
-          content: "logo";
+          content: "";
           display: block;
-          font-family: sans-serif;
-          font-size: 2rem;
-          padding: 1rem;
-          text-align: center;
-          text-shadow: none; }
+          min-height: 150px;
+          background-image: url("../assets/branding/logo-ver-1.png");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+          margin: auto;
+          width: 50%; }
         body section.intro header > h1::after {
-          background: orange;
-          border: 1px solid black;
-          color: black;
-          content: "separator";
+          content: "";
           display: block;
-          font-family: sans-serif;
-          font-size: 2rem;
-          padding: 1rem;
-          text-align: center;
-          text-shadow: none; }
+          min-height: 50px;
+          background-color: #ef3f3f;
+          clip-path: polygon(50% 25%, 100% 50%, 50% 75%, 0% 50%);
+          -webkit-clip-path: polygon(50% 25%, 100% 50%, 50% 75%, 0% 50%);
+          margin: auto;
+          width: 25%; }
       body section.intro header > h2 {
         text-align: center; }
         body section.intro header > h2::before {
-          background: orange;
-          border: 1px solid black;
-          color: black;
-          content: "map";
+          content: "";
           display: block;
-          font-family: sans-serif;
-          font-size: 2rem;
-          padding: 1rem;
-          text-align: center;
-          text-shadow: none; }
+          min-height: 300px;
+          background-image: url("../assets/zen-garden-map-sm.jpg");
+          background-repeat: no-repeat;
+          background-position: top;
+          background-size: contain; }
     @media (min-width: 400px) {
       body section.intro > div {
         grid-column-start: main-left; } }
@@ -110,16 +104,61 @@ Responsive Grid & Media Queries
       grid-row-start: 9;
       text-align: center; }
       body footer::after {
-        background: orange;
-        border: 1px solid black;
-        color: black;
-        content: "disclaimer";
+        content: "DISCLAIMER: This page is a fan-made work, and is not affiliated with Wizards of the Coast. We acknowledge Wizards of the Coast and its products as the inspiration for the design of this page. Dungeons & Dragons, D&D, Wizards of the Coast, the dragon ampersand, all Wizards of the Coast product names, and their respective logos are trademarks of Wizards of the Coast in the USA and other countries.";
         display: block;
-        font-family: sans-serif;
-        font-size: 2rem;
-        padding: 1rem;
-        text-align: center;
-        text-shadow: none; }
+        min-height: 50px;
+        font-family: "ZatannaMisdirection", sans-serif;
+        font-size: 12px; }
+    body aside:before, body aside:after {
+      content: "";
+      display: block;
+      background-color: black;
+      height: 10px; }
+    body aside:before {
+      clip-path: polygon(0px 10px, 100% 10px, calc(100% - 20px) 0px, calc(100% - 20px) 8px, 20px 8px, 20px 0px);
+      -webkit-clip-path: polygon(0px 10px, 100% 10px, calc(100% - 20px) 0px, calc(100% - 20px) 8px, 20px 8px, 20px 0px); }
+    body aside:after {
+      clip-path: polygon(20px 10px, 20px 2px, calc(100% - 20px) 2px, calc(100% - 20px) 10px, 100% 0px, 0px 0px);
+      -webkit-clip-path: polygon(20px 10px, 20px 2px, calc(100% - 20px) 2px, calc(100% - 20px) 10px, 100% 0px, 0px 0px); }
+    body aside > div {
+      display: grid;
+      background-color: #dcdee0;
+      grid-template-columns: [left] 1fr [middle] 1fr [right];
+      padding: 2rem; }
+      body aside > div h3 {
+        color: black;
+        border-bottom: none;
+        font-family: "ScalySansBold", sans-serif;
+        font-size: 15px;
+        margin: 0.5rem 0; }
+      body aside > div ul {
+        list-style: none;
+        margin: 0;
+        padding: 0; }
+        body aside > div ul > li {
+          padding: 0.1rem 0; }
+          body aside > div ul > li > a {
+            color: #a1452e;
+            font-size: 11px; }
+      body aside > div .design-selection {
+        grid-column: left / span right; }
+        body aside > div .design-selection ul > li {
+          display: grid;
+          grid-template-columns: [left] 1fr [middle-left] 0px [middle-right] 1fr [right];
+          visibility: collapse; }
+          body aside > div .design-selection ul > li:nth-of-type(2n+1) a {
+            background-color: #bdd4d1; }
+          body aside > div .design-selection ul > li a {
+            padding: 0.3rem 1rem;
+            visibility: visible; }
+            body aside > div .design-selection ul > li afirst-child {
+              grid-column: left / span middle-left; }
+            body aside > div .design-selection ul > li alast-child {
+              grid-column: middle-right / span right; }
+      body aside > div .design-archives {
+        grid-column: left / span middle; }
+      body aside > div .zen-resources {
+        grid-column: middle / span right; }
     @media (min-width: 400px) {
       body section.intro > div,
       body div.main > div,
@@ -135,16 +174,13 @@ Responsive Grid & Media Queries
       body aside.sidebar {
         grid-column-start: middle; }
       body div.benefits::after {
-        background: orange;
-        border: 1px solid black;
-        color: black;
-        content: "decor";
+        content: "";
         display: block;
-        font-family: sans-serif;
-        font-size: 2rem;
-        padding: 1rem;
-        text-align: center;
-        text-shadow: none; }
+        min-height: 150px;
+        background-image: url("../assets/zen-garden-illustration.png");
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: contain; }
       body footer {
         grid-row-start: 6; } }
     @media (min-width: 1400px) {
@@ -168,28 +204,6 @@ Responsive Grid & Media Queries
 xNavigation
 
 -------------------------------- */
-> div {
-  background-color: #dcdee0;
-  padding: 2rem; }
-  > div > h3 {
-    color: black;
-    border-bottom: none;
-    font-family: "ScalySansBold", sans-serif;
-    font-size: 1.5rem;
-    margin: 0.5rem 0; }
-  > div > nav > ul {
-    list-style: none;
-    margin: 0;
-    padding: 0; }
-    > div > nav > ul > li {
-      padding: 0.1rem 0; }
-      > div > nav > ul > li > a {
-        color: #a1452e; }
-  > div > nav.cd-primary-nav > ul > li {
-    padding: 0.3rem 1rem; }
-    > div > nav.cd-primary-nav > ul > li:nth-of-type(2n+1) {
-      background-color: #bdd4d1; }
-
 /* --------------------------------
 
 xTypography
@@ -205,20 +219,20 @@ h1 {
   letter-spacing: .025em;
   text-shadow: -3px -3px 0px black, 3px 3px 0px black, -3px 3px 0px black, 3px -3px 0px black, -3px -2px 0px black, 3px 2px 0px black, -3px 2px 0px black, 3px -2px 0px black, -3px -1px 0px black, 3px 1px 0px black, -3px 1px 0px black, 3px -1px 0px black, -3px 0px 0px black, 3px 0px 0px black, -2px -3px 0px black, 2px 3px 0px black, -2px 3px 0px black, 2px -3px 0px black, -1px -3px 0px black, 1px 3px 0px black, -1px 3px 0px black, 1px -3px 0px black, 0px -3px 0px black, 0px 3px 0px black;
   text-transform: uppercase;
-  font-size: 5.4rem;
+  font-size: 54px;
   line-height: 1.2;
   margin: 0 0 .4em; }
   @media (min-width: 400px) {
     h1 {
-      font-size: 7.6rem; } }
+      font-size: 72px; } }
 
 h2 {
   margin: 1em 0;
-  font-size: 2.8rem; }
+  font-size: 28px; }
 
 h3 {
   margin: 1em 0;
-  font-size: 2rem;
+  font-size: 18px;
   border-bottom: 1px solid #d3b63b;
   padding-bottom: .1rem; }
   h3.nav {
@@ -231,8 +245,8 @@ h3 {
       content: none !important; }
   h3 + p {
     font-family: "ScalySans", sans-serif;
-    font-size: 1.3rem;
-    line-height: 1.4;
+    font-size: 11px;
+    line-height: 1.8;
     padding: 10px;
     background-color: #dcdee0;
     border-left: 2px solid #8b281c;
@@ -261,7 +275,7 @@ section > h3::before {
   color: #9e8723; }
 
 p {
-  font-size: 1.4rem;
+  font-size: 12px;
   line-height: 1.6;
   color: black; }
   p a {

@@ -1,40 +1,67 @@
 > div {
+	@include make-grid;
 	background-color: $blue;
+	grid-template-columns: [left] 1fr [middle] 1fr [right];
 	padding: 2rem;
 
-	> h3 {
+	h3 {
 		color: black;
 		border-bottom: none;
 		font-family: $nav-heading-font;
-		font-size: 1.5rem;
+		font-size: 15px;
 		margin: 0.5rem 0;
 	}
 
-	> nav {
-		> ul {
-			list-style: none;
-			margin: 0;
-			padding: 0;
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
 
-			> li {
-				padding: 0.1rem 0;
-				> a {
-					color: $link-color;
-				}
+		> li {
+			padding: 0.1rem 0;
+			> a {
+				color: $link-color;
+				font-size: 11px;
 			}
 		}
+	}
 
-		&.cd-primary-nav {
-			> ul {
-				> li {
-					padding: 0.3rem 1rem;
+	.design-selection {
+		grid-column: left / span right;
+		ul {
+			> li {
+				@include make-grid;
+				grid-template-columns: [left] 1fr [middle-left] 0px [middle-right] 1fr [right];
+				visibility: collapse;
 
-					&:nth-of-type(2n+1) {
+				&:nth-of-type(2n+1) {
+					a {
 						background-color: $green;
+					}
+				}
+
+				a {
+					padding: 0.3rem 1rem;
+					visibility: visible;
+
+					&first-child {
+						grid-column: left / span middle-left;
+					}
+
+					&last-child {
+						grid-column: middle-right / span right;
 					}
 				}
 			}
 		}
+	}
+
+	.design-archives {
+		grid-column: left / span middle;
+	}
+
+	.zen-resources {
+		grid-column: middle / span right;
 	}
 }
 

@@ -11,6 +11,12 @@
 	@return map-get($main-cell-max-widths, $breakpoint);
 }
 
+@mixin make-pseudo-zone ($min-height: 50px, $content: "") {
+	content: $content;
+	display: block;
+	min-height: $min-height;
+}
+
 @mixin build-zone ($color: orange) {
 	background: $color;
 	border: 1px solid black;
@@ -18,9 +24,8 @@
 
 @mixin build-pseudo-zone($content, $color: orange) {
 	@include build-zone($color);
+	@include make-pseudo-zone(50px, $content);
 	color: black;
-	content: $content;
-	display: block;
 	font-family: sans-serif;
 	font-size: 2rem;
 	padding: 1rem;
@@ -84,11 +89,22 @@
 					text-align: center;
 
 					&::before {
-						@include build-pseudo-zone("logo");
+						@include make-pseudo-zone(150px);
+						background-image: url("../assets/branding/logo-ver-1.png");
+						background-repeat: no-repeat;
+						background-position: center;
+						background-size: contain;
+						margin: auto;
+						width: 50%;
 					}
 
 					&::after {
-						@include build-pseudo-zone("separator");
+						@include make-pseudo-zone;
+						background-color: $logo-red;
+						clip-path: polygon(50% 25%, 100% 50%, 50% 75%, 0% 50%);
+						-webkit-clip-path: polygon(50% 25%, 100% 50%, 50% 75%, 0% 50%);
+						margin: auto;
+						width: 25%;
 					}
 				}
 				
@@ -96,7 +112,11 @@
 					text-align: center;
 
 					&::before {
-						@include build-pseudo-zone("map");
+						@include make-pseudo-zone(300px);
+						background-image: url("../assets/zen-garden-map-sm.jpg");
+						background-repeat: no-repeat;
+						background-position: top;
+						background-size: contain;
 					}
 				}
 			}
@@ -113,8 +133,30 @@
 			text-align: center;
 
 			&::after {
-				@include build-pseudo-zone("disclaimer");
+				@include make-pseudo-zone(50px, "DISCLAIMER: This page is a fan-made work, and is not affiliated with Wizards of the Coast. We acknowledge Wizards of the Coast and its products as the inspiration for the design of this page. Dungeons & Dragons, D&D, Wizards of the Coast, the dragon ampersand, all Wizards of the Coast product names, and their respective logos are trademarks of Wizards of the Coast in the USA and other countries.");
+				font-family: $footer-font;
+				font-size: 12px;
 			}
+		}
+
+		aside {
+			&:before, &:after {
+				content: "";
+				display: block;
+				background-color: black;
+				height: 10px;
+			}
+
+			&:before {
+				clip-path: polygon(0px 10px,100% 10px,calc(100% - 20px) 0px,calc(100% - 20px) 8px,20px 8px,20px 0px);
+				-webkit-clip-path: polygon(0px 10px,100% 10px,calc(100% - 20px) 0px,calc(100% - 20px) 8px,20px 8px,20px 0px);
+			}
+
+			&:after {
+				clip-path: polygon(20px 10px,20px 2px,calc(100% - 20px) 2px,calc(100% - 20px) 10px,100% 0px,0px 0px);
+				-webkit-clip-path: polygon(20px 10px,20px 2px,calc(100% - 20px) 2px,calc(100% - 20px) 10px,100% 0px,0px 0px);
+			}
+			@import "navigation";
 		}
 
 		@include media-breakpoint-up(sm) {
@@ -140,7 +182,11 @@
 
 			div.benefits {
 				&::after {
-					@include build-pseudo-zone("decor");
+					@include make-pseudo-zone(150px);
+					background-image: url("../assets/zen-garden-illustration.png");
+					background-repeat: no-repeat;
+					background-position: top;
+					background-size: contain;
 				}
 			}
 
