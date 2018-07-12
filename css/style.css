@@ -263,7 +263,8 @@ section > h3::before {
 p {
   font-size: 1.4rem;
   line-height: 1.6;
-  color: black; }
+  color: black;
+  font-family: "Bookinsanity", serif; }
   p a {
     color: #a1452e; }
   p.footer {
