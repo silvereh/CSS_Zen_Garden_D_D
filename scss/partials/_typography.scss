@@ -1,6 +1,6 @@
 @mixin opening {
 	font-family: $text-box-font;
-	font-size: 11px;
+	font-size: 14px;
 	line-height: 1.8;
 	padding: 10px;
 	background-color: $blue;
@@ -65,25 +65,25 @@ h1 {
 	// -webkit-text-stroke: .3px black;
 	// text-stroke: .3px black;
 	text-transform: uppercase;
-	font-size: 54px;
+	font-size: 66px;
 	line-height: 1.2;
 	margin: 0 0 .4em;
 
 	@include media-breakpoint-up(sm) {
-		font-size: 72px;
+		font-size: 96px;
 		// -webkit-text-stroke-width: .5px;
 	}
 }
 
 h2 {
 	margin: 1em 0;
-	font-size: 28px;
+	font-size: 36px;
 }
 
 h3 {
 	margin: 1em 0;
-	font-size: 18px;
-	border-bottom: 1px solid $heading-underline;
+	font-size: 24px;
+	border-bottom: 2px solid $heading-underline;
 	padding-bottom: .1rem;
 	&.nav{
 		font-family: $nav-heading-font;
@@ -101,19 +101,34 @@ h3 {
 	}
 }
 
-section > h3::before {
-	/* number before each section title */
-	color: darken($heading-underline, 15%);
+/* Numbers before h3's */
+
+.preamble > h3::before {
+	content: '1. ';
+}
+.explanation > h3::before {
+	content: '2. ';
+}
+.participation > h3::before {
+	content: '3. ';
+}
+.benefits > h3::before {
+	content: '4. ';
+}
+.requirements > h3::before {
+	content: '5. ';
 }
 
+
 p {
-	font-size: 12px;
+	font-size: 16px;
 	line-height: 1.6;
 	color: black;
 	font-family: $primary-font;
 
 	a {
 		color: $link-color;
+		text-decoration: none;
 	}
 
 	&.footer{

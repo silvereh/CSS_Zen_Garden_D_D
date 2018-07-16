@@ -104,12 +104,13 @@
 						clip-path: polygon(50% 25%, 100% 50%, 50% 75%, 0% 50%);
 						-webkit-clip-path: polygon(50% 25%, 100% 50%, 50% 75%, 0% 50%);
 						margin: auto;
-						width: 25%;
+						width: 35%;
 					}
 				}
 				
 				> h2 {
 					text-align: center;
+					margin: 2rem 0 0 0;
 
 					&::before {
 						@include make-pseudo-zone(300px);
@@ -117,6 +118,18 @@
 						background-repeat: no-repeat;
 						background-position: top;
 						background-size: contain;
+						margin-bottom: 5rem;
+						margin-top: 2rem;
+						width: 100%;
+						@include media-breakpoint-up(sm) {
+							background-image: url("../assets/zen-garden-map-md.jpg");
+						}
+						@include media-breakpoint-up(md) {
+							background-image: url("../assets/zen-garden-map-lg.jpg");
+						}
+						@include media-breakpoint-up(lg) {
+							background-image: url("../assets/zen-garden-map-xl.jpg");
+						}
 					}
 				}
 			}
@@ -131,11 +144,22 @@
 		footer {
 			grid-row-start: 9;
 			text-align: center;
+			font-family: $footer-font;
+			font-size: 16px;
+			margin-top: 3rem;
+
+			& a{
+				color: $link-color;
+				text-decoration: none;
+				padding: .5rem 1rem;
+				margin: -.25rem;
+				border-top: 2px solid $heading-underline;
+				border-bottom: 2px solid $heading-underline;
+			}
 
 			&::after {
 				@include make-pseudo-zone(50px, "DISCLAIMER: This page is a fan-made work, and is not affiliated with Wizards of the Coast. We acknowledge Wizards of the Coast and its products as the inspiration for the design of this page. Dungeons & Dragons, D&D, Wizards of the Coast, the dragon ampersand, all Wizards of the Coast product names, and their respective logos are trademarks of Wizards of the Coast in the USA and other countries.");
-				font-family: $footer-font;
-				font-size: 12px;
+				margin: 3rem 0 -2rem 0;
 			}
 		}
 
@@ -157,6 +181,8 @@
 				-webkit-clip-path: polygon(20px 10px,20px 2px,calc(100% - 20px) 2px,calc(100% - 20px) 10px,100% 0px,0px 0px);
 			}
 			@import "navigation";
+
+			margin-top: 2.5rem;
 		}
 
 		@include media-breakpoint-up(sm) {
@@ -187,6 +213,7 @@
 					background-repeat: no-repeat;
 					background-position: top;
 					background-size: contain;
+					height: 100%;
 				}
 			}
 

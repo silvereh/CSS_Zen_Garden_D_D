@@ -1,4 +1,4 @@
-> div {
+& > div {
 	@include make-grid;
 	background-color: $blue;
 	grid-template-columns: [left] 1fr [middle] 1fr [right];
@@ -8,7 +8,8 @@
 		color: black;
 		border-bottom: none;
 		font-family: $nav-heading-font;
-		font-size: 15px;
+		font-size: 20px;
+		font-variant: small-caps;
 		margin: 0.5rem 0;
 	}
 
@@ -21,7 +22,9 @@
 			padding: 0.1rem 0;
 			> a {
 				color: $link-color;
-				font-size: 11px;
+				font-family: $text-box-font;
+				font-size: 14px;
+				text-decoration: none;
 			}
 		}
 	}

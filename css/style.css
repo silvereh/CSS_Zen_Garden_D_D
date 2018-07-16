@@ -86,9 +86,10 @@ Responsive Grid & Media Queries
           clip-path: polygon(50% 25%, 100% 50%, 50% 75%, 0% 50%);
           -webkit-clip-path: polygon(50% 25%, 100% 50%, 50% 75%, 0% 50%);
           margin: auto;
-          width: 25%; }
+          width: 35%; }
       body section.intro header > h2 {
-        text-align: center; }
+        text-align: center;
+        margin: 2rem 0 0 0; }
         body section.intro header > h2::before {
           content: "";
           display: block;
@@ -96,69 +97,95 @@ Responsive Grid & Media Queries
           background-image: url("../assets/zen-garden-map-sm.jpg");
           background-repeat: no-repeat;
           background-position: top;
-          background-size: contain; }
+          background-size: contain;
+          margin-bottom: 5rem;
+          margin-top: 2rem;
+          width: 100%; }
+          @media (min-width: 400px) {
+            body section.intro header > h2::before {
+              background-image: url("../assets/zen-garden-map-md.jpg"); } }
+          @media (min-width: 992px) {
+            body section.intro header > h2::before {
+              background-image: url("../assets/zen-garden-map-lg.jpg"); } }
+          @media (min-width: 1400px) {
+            body section.intro header > h2::before {
+              background-image: url("../assets/zen-garden-map-xl.jpg"); } }
     @media (min-width: 400px) {
       body section.intro > div {
         grid-column-start: main-left; } }
     body footer {
       grid-row-start: 9;
-      text-align: center; }
+      text-align: center;
+      font-family: "ZatannaMisdirection", sans-serif;
+      font-size: 16px;
+      margin-top: 3rem; }
+      body footer a {
+        color: #a1452e;
+        text-decoration: none;
+        padding: .5rem 1rem;
+        margin: -.25rem;
+        border-top: 2px solid #d3b63b;
+        border-bottom: 2px solid #d3b63b; }
       body footer::after {
         content: "DISCLAIMER: This page is a fan-made work, and is not affiliated with Wizards of the Coast. We acknowledge Wizards of the Coast and its products as the inspiration for the design of this page. Dungeons & Dragons, D&D, Wizards of the Coast, the dragon ampersand, all Wizards of the Coast product names, and their respective logos are trademarks of Wizards of the Coast in the USA and other countries.";
         display: block;
         min-height: 50px;
-        font-family: "ZatannaMisdirection", sans-serif;
-        font-size: 12px; }
-    body aside:before, body aside:after {
-      content: "";
-      display: block;
-      background-color: black;
-      height: 10px; }
-    body aside:before {
-      clip-path: polygon(0px 10px, 100% 10px, calc(100% - 20px) 0px, calc(100% - 20px) 8px, 20px 8px, 20px 0px);
-      -webkit-clip-path: polygon(0px 10px, 100% 10px, calc(100% - 20px) 0px, calc(100% - 20px) 8px, 20px 8px, 20px 0px); }
-    body aside:after {
-      clip-path: polygon(20px 10px, 20px 2px, calc(100% - 20px) 2px, calc(100% - 20px) 10px, 100% 0px, 0px 0px);
-      -webkit-clip-path: polygon(20px 10px, 20px 2px, calc(100% - 20px) 2px, calc(100% - 20px) 10px, 100% 0px, 0px 0px); }
-    body aside > div {
-      display: grid;
-      background-color: #dcdee0;
-      grid-template-columns: [left] 1fr [middle] 1fr [right];
-      padding: 2rem; }
-      body aside > div h3 {
-        color: black;
-        border-bottom: none;
-        font-family: "ScalySansBold", sans-serif;
-        font-size: 15px;
-        margin: 0.5rem 0; }
-      body aside > div ul {
-        list-style: none;
-        margin: 0;
-        padding: 0; }
-        body aside > div ul > li {
-          padding: 0.1rem 0; }
-          body aside > div ul > li > a {
-            color: #a1452e;
-            font-size: 11px; }
-      body aside > div .design-selection {
-        grid-column: left / span right; }
-        body aside > div .design-selection ul > li {
-          display: grid;
-          grid-template-columns: [left] 1fr [middle-left] 0px [middle-right] 1fr [right];
-          visibility: collapse; }
-          body aside > div .design-selection ul > li:nth-of-type(2n+1) a {
-            background-color: #bdd4d1; }
-          body aside > div .design-selection ul > li a {
-            padding: 0.3rem 1rem;
-            visibility: visible; }
-            body aside > div .design-selection ul > li afirst-child {
-              grid-column: left / span middle-left; }
-            body aside > div .design-selection ul > li alast-child {
-              grid-column: middle-right / span right; }
-      body aside > div .design-archives {
-        grid-column: left / span middle; }
-      body aside > div .zen-resources {
-        grid-column: middle / span right; }
+        margin: 3rem 0 -2rem 0; }
+    body aside {
+      margin-top: 2.5rem; }
+      body aside:before, body aside:after {
+        content: "";
+        display: block;
+        background-color: black;
+        height: 10px; }
+      body aside:before {
+        clip-path: polygon(0px 10px, 100% 10px, calc(100% - 20px) 0px, calc(100% - 20px) 8px, 20px 8px, 20px 0px);
+        -webkit-clip-path: polygon(0px 10px, 100% 10px, calc(100% - 20px) 0px, calc(100% - 20px) 8px, 20px 8px, 20px 0px); }
+      body aside:after {
+        clip-path: polygon(20px 10px, 20px 2px, calc(100% - 20px) 2px, calc(100% - 20px) 10px, 100% 0px, 0px 0px);
+        -webkit-clip-path: polygon(20px 10px, 20px 2px, calc(100% - 20px) 2px, calc(100% - 20px) 10px, 100% 0px, 0px 0px); }
+      body aside > div {
+        display: grid;
+        background-color: #dcdee0;
+        grid-template-columns: [left] 1fr [middle] 1fr [right];
+        padding: 2rem; }
+        body aside > div h3 {
+          color: black;
+          border-bottom: none;
+          font-family: "ScalySansBold", sans-serif;
+          font-size: 20px;
+          font-variant: small-caps;
+          margin: 0.5rem 0; }
+        body aside > div ul {
+          list-style: none;
+          margin: 0;
+          padding: 0; }
+          body aside > div ul > li {
+            padding: 0.1rem 0; }
+            body aside > div ul > li > a {
+              color: #a1452e;
+              font-family: "ScalySans", sans-serif;
+              font-size: 14px;
+              text-decoration: none; }
+        body aside > div .design-selection {
+          grid-column: left / span right; }
+          body aside > div .design-selection ul > li {
+            display: grid;
+            grid-template-columns: [left] 1fr [middle-left] 0px [middle-right] 1fr [right];
+            visibility: collapse; }
+            body aside > div .design-selection ul > li:nth-of-type(2n+1) a {
+              background-color: #bdd4d1; }
+            body aside > div .design-selection ul > li a {
+              padding: 0.3rem 1rem;
+              visibility: visible; }
+              body aside > div .design-selection ul > li afirst-child {
+                grid-column: left / span middle-left; }
+              body aside > div .design-selection ul > li alast-child {
+                grid-column: middle-right / span right; }
+        body aside > div .design-archives {
+          grid-column: left / span middle; }
+        body aside > div .zen-resources {
+          grid-column: middle / span right; }
     @media (min-width: 400px) {
       body section.intro > div,
       body div.main > div,
@@ -180,7 +207,8 @@ Responsive Grid & Media Queries
         background-image: url("../assets/zen-garden-illustration.png");
         background-repeat: no-repeat;
         background-position: top;
-        background-size: contain; }
+        background-size: contain;
+        height: 100%; }
       body footer {
         grid-row-start: 6; } }
     @media (min-width: 1400px) {
@@ -219,21 +247,21 @@ h1 {
   letter-spacing: .025em;
   text-shadow: -3px -3px 0px black, 3px 3px 0px black, -3px 3px 0px black, 3px -3px 0px black, -3px -2px 0px black, 3px 2px 0px black, -3px 2px 0px black, 3px -2px 0px black, -3px -1px 0px black, 3px 1px 0px black, -3px 1px 0px black, 3px -1px 0px black, -3px 0px 0px black, 3px 0px 0px black, -2px -3px 0px black, 2px 3px 0px black, -2px 3px 0px black, 2px -3px 0px black, -1px -3px 0px black, 1px 3px 0px black, -1px 3px 0px black, 1px -3px 0px black, 0px -3px 0px black, 0px 3px 0px black;
   text-transform: uppercase;
-  font-size: 54px;
+  font-size: 66px;
   line-height: 1.2;
   margin: 0 0 .4em; }
   @media (min-width: 400px) {
     h1 {
-      font-size: 72px; } }
+      font-size: 96px; } }
 
 h2 {
   margin: 1em 0;
-  font-size: 28px; }
+  font-size: 36px; }
 
 h3 {
   margin: 1em 0;
-  font-size: 18px;
-  border-bottom: 1px solid #d3b63b;
+  font-size: 24px;
+  border-bottom: 2px solid #d3b63b;
   padding-bottom: .1rem; }
   h3.nav {
     font-family: "ScalySansBold", sans-serif;
@@ -245,7 +273,7 @@ h3 {
       content: none !important; }
   h3 + p {
     font-family: "ScalySans", sans-serif;
-    font-size: 11px;
+    font-size: 14px;
     line-height: 1.8;
     padding: 10px;
     background-color: #dcdee0;
@@ -270,22 +298,35 @@ h3 {
       bottom: -3px;
       left: -4px; }
 
-section > h3::before {
-  /* number before each section title */
-  color: #9e8723; }
+/* Numbers before h3's */
+.preamble > h3::before {
+  content: '1. '; }
+
+.explanation > h3::before {
+  content: '2. '; }
+
+.participation > h3::before {
+  content: '3. '; }
+
+.benefits > h3::before {
+  content: '4. '; }
+
+.requirements > h3::before {
+  content: '5. '; }
 
 p {
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.6;
   color: black;
   font-family: "Bookinsanity", serif; }
   p a {
-    color: #a1452e; }
+    color: #a1452e;
+    text-decoration: none; }
   p.footer {
     font-family: "ZatannaMisdirection", sans-serif; }
 
 body {
-  background: url(../assets/bg-top.jpg) no-repeat top, url(../assets/bg-bottom.png) no-repeat bottom, url(../assets/bg-middle.jpg) repeat-y center;
+  background: url(../assets/bg-top.png) no-repeat top, url(../assets/bg-bottom.png) no-repeat bottom, url(../assets/bg-middle.jpg) repeat-y center;
   background-color: black;
   background-size: 300%;
   padding: 7rem 1rem; }
