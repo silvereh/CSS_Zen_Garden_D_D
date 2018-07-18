@@ -95,14 +95,14 @@ $nav-heading-font: 'ScalySansBold', sans-serif;
 // Grid system
 $grid-breakpoints: (
 	xs: 0,
-	sm: 400px,
+	sm: 450px,
 	md: 992px,
 	lg: 1400px
 ) !default;
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
 
 $main-cell-max-widths: (
-	sm: 400px,
+	sm: 350px,
 	md: 400px,
 	lg: 400px
 ) !default;

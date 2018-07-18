@@ -69,7 +69,7 @@ h1 {
 	line-height: 1.2;
 	margin: 0 0 .4em;
 
-	@include media-breakpoint-up(sm) {
+	@include media-breakpoint-up(md) {
 		font-size: 96px;
 		// -webkit-text-stroke-width: .5px;
 	}
